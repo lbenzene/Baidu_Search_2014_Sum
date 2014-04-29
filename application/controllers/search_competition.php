@@ -84,6 +84,14 @@ class Search_competition extends CI_Controller {
 		}
 	}
 
+	public function signup()
+	{
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+
+		$this->load_view('signup');
+	}
+
 	public function name_used($str)
 	{
 		$this->load->modal('user');

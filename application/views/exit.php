@@ -5,7 +5,7 @@
         <p id="timing">5</p>
         <p>秒后返回首页</p>
     </div>
-
+ 
 </div>
 
 <br />

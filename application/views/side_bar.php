@@ -11,7 +11,10 @@
                     <a href="<?=site_url('search_competition/rules')?>">大赛规则</a>
                 </li>
                 <li class="side_bar">
-                    <a href="<?=site_url('search_competition/register')?>">大赛报名</a>
+                    <a href="<?=site_url('search_competition/register')?>">线上注册</a>
+                </li>
+                <li class="side_bar">
+                    <a href="<?=site_url('search_competition/signup')?>">线下报名</a>
                 </li>
                 <li class="side_bar">
                     <a href="<?= isset($login)

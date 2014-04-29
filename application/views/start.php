@@ -9,7 +9,7 @@
         <br>
         <br>
         <br>
-        <span class="btn-success"><a href="<?=site_url('/search_competition/questionare')?>" target="_self">开始</a></span>
+        <span class="btn btn-success"><a href="<?=site_url('/search_competition/questionare')?>" target="_self">开始</a></span>
         <br>
         <br>
         <br>
