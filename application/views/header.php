@@ -71,6 +71,7 @@
         text-align: center;
         margin-left: 0 auto;
         margin-right: 0 auto;
+        vertical-align: middle;
     }
 
     .right{
@@ -105,19 +106,49 @@
       color: #232323;
     }
 
-    .login_form{
+    div.login_form{
         padding: 30px 10px;
     }
-    .login{
+    div.login{
         padding: 40px;
         margin: 10px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #888;
         -webkit-border-radius: 5px;
            -moz-border-radius: 5px;   
                 border-radius: 5px;
         background-color: #ebebeb;
+    }
+    div.login_group{
+
+    }
+    label.login_label{
+        display: block;
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 6px;
+        width: 0;
+        height: 24px;
+        overflow: hidden;
+        padding: 0 0 0 24px;
+        background: url("<?=base_url('img/login_icon.png')?>") no-repeat;
+        z-index: 20;
+    }
+
+    label.login_label_username{
+        background-position: 0 -68px;
+    }
+
+    label.login_label_password{
+        background-position: 0 -147px;
+    }
+
+    div.login_group > p > input.form-control{
+        width: 100%;
+    }
+
+
+    div.login_right{
+        height: 100%;
+        vertical-align: middle;
     }
 </style>
 

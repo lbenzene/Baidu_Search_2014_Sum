@@ -17,24 +17,34 @@
 
                 <p class="tmumber left"><span class="label label-success">1号队员</span></p>
                 <div class="input-group">
-                    <span class="input-group-addon">姓名</span>
+                    <span class="input-group-addon" for="name1">姓名</span>
                     <input type="text" class="form-control" placeholder=" 姓名" name="name1">
                 </div>
                 
                 <div class="input-group">
-                    <span class="input-group-addon">学号</span>
+                    <span class="input-group-addon" for="id1">学号</span>
                     <input type="text" class="form-control" placeholder=" 学号" name="id1">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" for="phone1">手机</span>
+                    <input type="text" class="form-control" placeholder=" 手机" name="phone1">
                 </div>
 
                 <p class="tmumber left"><span class="label label-success">2号队员</span></p>
                 <div class="input-group">
-                    <span class="input-group-addon">姓名</span>
+                    <span class="input-group-addon" for="name2">姓名</span>
                     <input type="text" class="form-control" placeholder=" 姓名" name="name2">
                 </div>
                 
                 <div class="input-group">
-                    <span class="input-group-addon">学号</span>
+                    <span class="input-group-addon" for="id2">学号</span>
                     <input type="text" class="form-control" placeholder=" 学号" name="id2">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" for="phone2">手机</span>
+                    <input type="text" class="form-control" placeholder=" 手机" name="phone2">
                 </div>
                 
                     <!--/基本信息板块-->
