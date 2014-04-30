@@ -48,6 +48,15 @@
                 border-radius: 3px;
     }
 
+    div#main > div{
+    width: 100%;
+    margin: 0 0 0 15px;
+    padding: 20px 0 20px 0;
+    border: 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    }
+
     div.container{
         font-family:  '微软雅黑';
     }
@@ -234,14 +243,16 @@
 
 
 <div class="container"> 
-    <div class="col-md-1"></div>
-    <div class="main col-md-10">
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="main col-xs-10">
 
-        <h1> 大 赛 </h1>
-        <br />
+            <h1> 大 赛 </h1>
+            <br />
 
+        </div>
+        <div class="col-xs-1"></div>
     </div>
-    <div class="col-md-1"></div>
 </div>
 <br />
 <hr />

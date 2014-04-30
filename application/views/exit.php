@@ -1,5 +1,5 @@
     <!--  main  -->
-    <div class="col-md-10 main">
+    <div class="col-xs-10 main">
         <p>退出成功</p>
         <p></p>
         <p id="timing">5</p>

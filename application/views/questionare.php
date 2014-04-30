@@ -83,6 +83,10 @@ $filling_qst = array(
         font-family:  '微软雅黑';
     }
 
+    .form-control{
+        padding: 6px 12px;
+    }
+
     div.p_left{
         width: 80%;
         position: relative;
@@ -236,7 +240,7 @@ $filling_qst = array(
 
     <!-- 答题页面 -->
 
-    <div class="main col-md-12">
+    <div class="main col-xs-12">
         <div class="p_left">
             <br />
                 <!-- 单选 -->

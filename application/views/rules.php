@@ -4,7 +4,7 @@
 
 
 
-    <div class="col-md-10 main">
+    <div class="col-xs-10 main">
 
         <h1 id="a1">啊啊啊</h1>
         <div>

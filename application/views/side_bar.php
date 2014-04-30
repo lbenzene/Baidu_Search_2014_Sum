@@ -1,6 +1,6 @@
 
 <div class="container"> 
-    <div class="col-md-2">
+    <div class="col-xs-2">
 
         <div class="hidden-print" role="complementary">
             <ul class="nav">

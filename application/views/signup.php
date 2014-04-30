@@ -1,9 +1,9 @@
     <!--  main  -->
-    <div class="col-md-10 main">
+    <div class="col-xs-10 main">
 
-        <div class="col-md-1"></div>
+        <div class="col-xs-1"></div>
 
-        <div class="col-md-10">
+        <div class="col-xs-10">
             <br />
             <h1>线下大赛报名</h1>
             <p><?php echo validation_errors(); ?></p>
@@ -75,7 +75,7 @@
 
 
 
-        <div class="col-md-1"></div>
+        <div class="col-xs-1"></div>
     </div>
 
     <!-- End of the whole div -->

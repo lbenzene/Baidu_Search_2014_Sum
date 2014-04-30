@@ -1,5 +1,5 @@
 	<!--  main -->
-    <div class="col-md-10 main">
+    <div class="col-xs-10 main">
 
         <h1 id="a1">将在10小时后开始？</h1>
         <h1>剩余时间~~~~！！</h1>

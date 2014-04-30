@@ -1,5 +1,5 @@
     <!--  main  -->
-    <div class="col-md-10 main">
+    <div class="col-xs-10 main">
         <p>登录成功</p>
         <p>欢迎您，<?=$username?></p>
         <p><b id="timing">5</b>秒后返回首页</p>
