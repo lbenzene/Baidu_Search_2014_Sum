@@ -119,6 +119,11 @@ class Search_competition extends CI_Controller {
 		$this->load_view('start');
 	}
 
+	public function login()
+	{
+		$this->load_view('login');
+	}
+
 	//登录检查
 	// 
 	public function check_login()
@@ -149,25 +154,12 @@ class Search_competition extends CI_Controller {
 			$this->load_view('login_error', $data);
 
 		}
-*/			//text
+*/			//test
 		$session_data = array('username' => $_POST['username'], 'login' => TRUE);
 		$this->session->set_userdata( $session_data );
 		// var_dump($this->session->all_userdata());
 		$this->load_view('login_success');
 
-	}
-
-
-	public function login()
-	{
-		if (isset($_SESSION['login'])) 
-		{
-			$this->load_view('index');
-		}
-		else
-		{
-			$this->load_view('login');	
-		}
 	}
 
 	public function exit_login()
@@ -216,6 +208,19 @@ class Search_competition extends CI_Controller {
 		}
 		$this->load->view('questionare', $session);
 		$this->load->view('footer');
+	}
+
+
+
+
+
+	//  new add on March 3rd
+	//  display scores and the 
+	public function scores()
+	{
+		//methods to get scores here.
+		//$data = $this->****;
+		$this->load_view('scores');
 	}
 
 	

@@ -21,7 +21,9 @@
                                 ? site_url('search_competition/competition') 
                                 : site_url('search_competition/login')?>">开始答题</a>
                 </li>
-                              
+                <li class="side_bar">
+                    <a href="<?=site_url('search_competition/scores')?>">查看成绩</a>
+                </li>
             </ul>
         </div>
     </div>        

@@ -9,7 +9,7 @@
             <p><?php echo validation_errors(); ?></p>
 <!--------------------------action---------------------------->        
 
-             <form id="reg_form" class="form-horizontal" role="form" method="post" 
+             <form id="reg_form" class="form-horizontal" role="form" method="post" autocomplete="OFF" 
                    action="<?=site_url('search_competition/register')?>">
  
 <!--                 <?php echo form_open('form'); ?> -->
@@ -17,7 +17,7 @@
                 <h3 class="left"><span class="label label-success">帐号信息</span></h3>
 
                 <div class="input-group">
-                    <span class="input-group-addon" autocomplete="OFF">帐号</span>
+                    <span class="input-group-addon">帐号</span>
                     <input name="username" type="text" class="form-control" placeholder=" 帐号" 
                             value="<?=set_value('username'); ?>" size="50">
                 </div>

@@ -41,17 +41,24 @@
         font-family: "微软雅黑", "Lato", Helvetica, Arial, sans-serif;
     }
 
+    div.head{
+         background-color:   #EBEBEB;
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;      
+    }
+
     div.main{
         background-color:   #EBEBEB;
         -webkit-border-radius: 3px;
            -moz-border-radius: 3px;
                 border-radius: 3px;
+        padding: 30px 20px;
     }
 
     div#main > div{
     width: 100%;
-    margin: 0 0 0 15px;
-    padding: 20px 0 20px 0;
+    padding: 20px 10px;
     border: 0;
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
@@ -132,7 +139,7 @@
     label.login_label{
         display: block;
         position: absolute;
-        margin-top: 6px;
+        margin-top: 4px;
         margin-left: 6px;
         width: 0;
         height: 24px;
@@ -245,7 +252,7 @@
 <div class="container"> 
     <div class="row">
         <div class="col-xs-1"></div>
-        <div class="main col-xs-10">
+        <div class="head col-xs-10">
 
             <h1> 大 赛 </h1>
             <br />

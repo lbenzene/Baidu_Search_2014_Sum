@@ -2,7 +2,7 @@
 
 <div class="container">
     <footer>
-    <p>Copyright © 2014 ZJU <a href="#">Baidu Club</a></p>
+    <p>Copyright © 2014 ZJU <a href="http://baiduzju.org">Baidu Club</a></p>
     </footer>
 </div>
 
@@ -12,15 +12,6 @@
 <script src="<?=base_url('js/baidu.js')?>"></script>
 
 <script type="text/javascript">
-/*
-$(document).ready(function(){
-
-	$(".side_bar").mouseover(function(){
-		$(this).css('border-color', "#EBEBEB");
-	});
-
-});*/
-
 
 $(document).ready(function(){
     $('input').iCheck({
@@ -34,12 +25,22 @@ $(document).ready(function(){
         containerSelector: ".container", minWidth: 940
     });
 
-    $("#exit").click(
-        <?php
-        $_SESSION['login'] = FALSE;
-        ?>
-    );
-    
+    $("#login_username").focus(function(){
+        $("#login_username_label").css("background-position", "0 -108px");
+    });
+
+    $("#login_username").blur(function(){
+        $("#login_username_label").css("background-position", "0 -68px");
+    });
+
+    $("#login_password").focus(function(){
+        $("#login_password_label").css("background-position", "0 -187px");
+    });
+
+    $("#login_password").blur(function(){
+        $("#login_password_label").css("background-position", "0 -147px");
+    });
+
 });
 
 /*
@@ -68,18 +69,6 @@ $(document).ready(function(){
         ++default_num;
     }
 });
-*/
-
-/*
-var xmlhttp;
-if (window.XMLHttpRequest)
-{// code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-}
-else
-{// code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-}
 */
 </script>
 
