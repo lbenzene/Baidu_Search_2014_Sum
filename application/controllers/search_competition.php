@@ -211,15 +211,13 @@ class Search_competition extends CI_Controller {
 	}
 
 
-
-
-
 	//  new add on March 3rd
 	//  display scores and the 
 	public function scores()
 	{
 		//methods to get scores here.
 		//$data = $this->****;
+		//要排列
 		$this->load_view('scores');
 	}
 

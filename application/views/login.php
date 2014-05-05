@@ -27,27 +27,8 @@
             </form>
             </div>
         </div>
-<!--
-<script type="text/javascript">
-    var xmlHttp;
-    function validateEmail() {
-        var username = document.getElementById("login_username");
-        var password = document.getElementById("login_password");
-        var url = <?=site_ure('/search_competition/')?> + escape(email.value);
-        if (window.ActiveXObject) 
-        {
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        else if (window.XMLHttpRequest) 
-        {
-            xmlHttp = new XMLHttpRequest();
-        }
-        xmlHttp.open("GET", url);
-        xmlHttp.onreadystatechange = callback;
-        xmlHttp.send(null);
-    }
-</script>
--->
+
+
         <div class="col-md-6 login_right">
             <br />
             <h1 class="center">还没有帐号？</h1>
