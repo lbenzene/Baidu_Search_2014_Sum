@@ -1,8 +1,9 @@
     <!--  footer  -->
-<br >
-<div class="container">
+<div class="container center">
     <footer>
-    <p>Copyright © 2014 ZJU <a href="http://baiduzju.org">Baidu Club</a></p>
+    <p> 浙江大学企业俱乐部联合会百度俱乐部 & 浙江大学学生博雅国学社</p>
+
+    <p>Copyright © 2014 ZJU <a href="http://baiduzju.org">Baidu Club</a>. All Rights Reserved</p>
     </footer>
 </div>
 
