@@ -1,5 +1,5 @@
     <!--  footer  -->
-<br />
+<br >
 <div class="container">
     <footer>
     <p>Copyright © 2014 ZJU <a href="http://baiduzju.org">Baidu Club</a></p>

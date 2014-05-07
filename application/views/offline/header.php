@@ -22,7 +22,6 @@
 <link rel="stylesheet" href="<?=base_url('css/bootstrap.css')?> ">
 <link rel="stylesheet" href="<?=base_url('css/square/grey.css')?>" >
 <link rel="shortcut icon" href="<?=base_url('img/shortcut.jpg')?>">
-<!-- <link rel="stylesheet" href="<?=base_url('css/flat-ui.css')?>" > -->
 <style type="text/css">
 
     footer > p{
@@ -77,6 +76,7 @@
 
 
     div#main > div > p,
+    div#main > div > div > p,
     div#main > div > ol > li > p,
     div#main > div > ul > li > p{
         margin: 10px 0 0 0;
@@ -200,6 +200,74 @@
         height: 100%;
         vertical-align: middle;
     }
+
+    thead{
+        background-color: #00ccff;
+    }
+
+    /*  答题css  */
+    .note {
+        padding: 18px 20px;
+        text-decoration:none;
+        background: #ffc;
+        display:block;
+        width: 80%;        
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -webkit-transform: rotate(-6deg);
+           -moz-transform: rotate(-6deg);
+            -ms-transform: rotate(-6deg);
+                transform: rotate(-6deg);
+        font-size: 18px;
+        text-align: center;
+        margin-top: 40px;
+        overflow: hidden;
+    }
+
+    .note h3 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    div.p_left{
+        width: 80%;
+        position: relative;
+        float: left;
+        margin-bottom: 40px;
+        margin-left: 5%;
+    }
+
+    div.p_right{
+        width: 15%;
+        position: relative;
+        float: left;
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    div.single_choice_answer{
+        display: block;
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+                border-radius: 2px;
+        border-width:  0;
+        background-color:  #EBEBEB;
+        margin:  2px auto;
+    }
+
+
+    .left{
+        text-align: left;
+    }
+
+    .center{
+        text-align: center;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+    }
+
+    .right{
+        text-align: right;
+    }
 </style>
 
 </head>
@@ -227,47 +295,37 @@
     <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
             <li title="首页">
-                <a href="<?=site_url()?>">首页</a>
+                <a href="<?=site_url('offline_question/index')?>">线下</a>
             </li>
             <li title="规则">
-                <a href="<?=site_url('search_competition/rules')?>">规则</a>
+                <a href="<?=site_url('offline_question/rules')?>">规则</a>
             </li>
             <li title="答题">
-                <a href="<?=site_url('search_competition/competition')?>">答题</a>
+                <a href="<?= isset($login)
+                            ?site_url('offline_question/start')
+                            :site_url('offline_question/login')?>">答题</a>
+            </li>
+            <li title="成绩">
+                <a href="<?=site_url('offline_question/scores')?>">成绩</a>
             </li>
         </ul>
-<!-- 
+
         <ul class="nav navbar-nav navbar-right nav-pills">
             <?php if ( isset($login) ) { ?>
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="<?=site_url('search_competition/scores')?>">查看成绩</a></li>
+                    <li><a href="<?=site_url('offline_question/scores')?>">查看成绩</a></li>
                     <li><a href="#">啦啦啦啦</a></li>
                     <li class="divider"></li>
-                    <li id="exit"><a href="<?=site_url('search_competition/exit_login')?>">退出</a></li>
+                    <li id="exit"><a href="<?=site_url('offline_question/exit_login')?>">退出</a></li>
                 </ul>
             </li>
             <?php } else { ?>
-                <li title="注册">
-                    <a href="<?=site_url('search_competition/register')?>">注册</a>
-                </li>
                 <li title="登录">
-                    <a href="<?=site_url('search_competition/login')?>">登录</a>
+                    <a href="<?=site_url('offline_question/login')?>">登录</a>
                 </li>            
             <?php } ?>
- -->
-        <ul class="nav navbar-nav navbar-right nav-pills">
-            <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">其他<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">简介</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">郭神</a></li>
-                </ul>
-            </li> 
-
         </ul>
     </nav>
 
@@ -288,7 +346,7 @@
         <div class="col-xs-1"></div>
         <div class="head col-xs-10">
 
-            <h1>百度校园推广搜索大赛</h1>
+            <h1>线上比赛答题网站</h1>
 
         </div>
         <div class="col-xs-1"></div>

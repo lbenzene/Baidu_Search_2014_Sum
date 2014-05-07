@@ -2,10 +2,19 @@
 $user = array(
     '1' => array(
                 'username' => 'test1',
-                'scores' => '100'),
+                'scores' => '100',
+                'times' => '600'
+                ),
     '2' => array(
                 'username' => 'test2',
-                'scores' => '99.0')
+                'scores' => '99.0',
+                'times' => '2456'
+                ),
+    '3' => array(
+                'username' => 'test3',
+                'scores' => '0',
+                'times' => '0'
+                )
 );
 
 ?>
@@ -18,6 +27,7 @@ $user = array(
                 <th>排名</th>
                 <th>名字</th>
                 <th>得分</th>
+                <th>用时</th>
             </thead>
             <?php #user会改变
             foreach ($user as $key => $user_scores):?>
@@ -25,6 +35,7 @@ $user = array(
                 <td style="width:10%"><?=$key?></td>
                 <td><?=$user_scores['username']?></td>
                 <td><?=$user_scores['scores']?></td>
+                <td><?=$user_scores['times']?></td>          
             </tr>
             <?php endforeach;?>
         </table>
@@ -35,6 +46,4 @@ $user = array(
     </div>
 </div>
 
-<br />
-<br />
 	<!-- /main -->

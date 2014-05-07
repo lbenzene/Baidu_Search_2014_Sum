@@ -2,10 +2,10 @@
     <div class="col-xs-10 main login_form">
         <div class="col-md-6">
             <div class="login">
-            <form class="form-horizontal login_form" action="<?=site_url('/search_competition/check_login')?>" 
+            <form class="form-horizontal login_form" action="<?=site_url('online_question/check_login')?>" 
                 method="post" autocomplete="off">
                 <div class="login_group">
-                    <h3 class="center">登 录</h3>
+                    <h3 class="center">线上大赛登录</h3>
 
                     <p>返回错误信息</p>
 
@@ -20,7 +20,6 @@
                     </p>
                     <p><a href="" >忘记密码？</a></p>              
                     <p>
-                        <!-- <a type="submit" class="btn btn-success" href="<?=site_url('/search_competition/register')?>">注册</a> -->
                         <input type="submit" class="btn btn-success" value="登录" style="width:100%"/>
                     </p>
                 </div>

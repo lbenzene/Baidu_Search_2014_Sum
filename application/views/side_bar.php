@@ -17,12 +17,7 @@
                     <a href="<?=site_url('search_competition/signup')?>">线下报名</a>
                 </li>
                 <li class="side_bar">
-                    <a href="<?= isset($login)
-                                ? site_url('search_competition/competition') 
-                                : site_url('search_competition/login')?>">开始答题</a>
-                </li>
-                <li class="side_bar">
-                    <a href="<?=site_url('search_competition/scores')?>">查看成绩</a>
+                    <a href="<?=site_url('search_competition/competition')?>">开始答题</a>
                 </li>
             </ul>
         </div>
