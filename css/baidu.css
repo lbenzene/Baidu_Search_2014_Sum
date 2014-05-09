@@ -10,6 +10,7 @@ body{
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
   background-color: transparent;
   overflow: auto;
+
 }
 
 div#head{
@@ -89,6 +90,7 @@ a.whole{
   font-weight: normal;
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 
+
   -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
      -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
        -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
@@ -120,6 +122,7 @@ div.row > div > p{
   line-height: 150%; 
   color: #000;
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+
 }
 
 div.row > div > h3{
