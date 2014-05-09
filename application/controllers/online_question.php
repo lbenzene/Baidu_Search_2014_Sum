@@ -8,7 +8,7 @@ class Online_question extends CI_Controller {
 		parent::__construct();
 
 		$this->load->helper('url');
-//		$this->load->modal('search_competition');
+		$this->load->model('question_model');
 //		$this->load->library('session');
 	}
 
@@ -52,7 +52,7 @@ class Online_question extends CI_Controller {
 
 	public function check_login()
 	{	//test
-		$session_data = array('username' => $_POST['username'], 'login' => TRUE);
+		$session_data = array('username_online' => $_POST['username']);
 		$this->session->set_userdata( $session_data );
 		// var_dump($this->session->all_userdata());
 		$this->load_view('login_success');
@@ -71,9 +71,19 @@ class Online_question extends CI_Controller {
 		$this->load_view('select');
 	}
 
-	public function questionare($qst_num)
+	public function questionare($mark)
 	{
-		$this->load_view('questionare');
+		if (!is_numeric($mark)) $mark = 0;
+		if ($mark < 0 || $mark > 5) {
+			show_404();
+		}	else {		
+			if ($this->session->userdata('username_online')!=NULL) {
+				$data = $this->question_model->get_online_question_by_mark($mark);
+				$this->load_view('questionare',$data);
+			}	else {
+				redirect('online_question/login');
+			}
+		}
 	}
 
 }

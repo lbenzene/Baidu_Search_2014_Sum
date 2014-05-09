@@ -17,7 +17,7 @@
     var t3 = setTimeout("document.getElementByID('timing').innerHTML='2';",3000);
     var t4 = setTimeout("document.getElementByID('timing').innerHTML='1';",4000);
 
-    var t5 = setTimeout("window.location.assign('<?=site_url(online_question/start)?>');",5000);
+    var t5 = setTimeout("window.location.assign('<?=site_url('online_question/start')?>');",5000);
 
 </script>
     <!--  /main  -->
