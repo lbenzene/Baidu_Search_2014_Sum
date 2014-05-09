@@ -6,10 +6,11 @@ h1{
 }
 
 body{
-    font-size: 12px;
-    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
-    background-color: transparent;
-    overflow: auto;
+  font-size: 12px;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  background-color: transparent;
+  overflow: auto;
+
 }
 
 div#head{
@@ -24,7 +25,7 @@ div#head > div.jumbotron > div.container > h1,
 div#head > div.jumbotron > div.container > h3,
 div#head > div.jumbotron > div.container > p{
   color: #fff;
-  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 
 }
 
@@ -87,7 +88,7 @@ a.whole{
   text-align: center;
   font-size: 40px;
   font-weight: normal;
-  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 
 
   -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
@@ -120,7 +121,7 @@ div.row > div > p{
   margin: 12px 0 0 0;
   line-height: 150%; 
   color: #000;
-  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 
 }
 
@@ -159,7 +160,7 @@ div.row > div > p.info{
 
 
 div.container{
-    font-family:  '微软雅黑';
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 }
 
 div.single_choice_answer{
@@ -193,7 +194,7 @@ li.side_bar{
     border-width: 0px;
     font-size: 18px;
     padding-top: 10px;
-    font-family: '微软雅黑';
+    font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
     text-align: center;
 }
 
