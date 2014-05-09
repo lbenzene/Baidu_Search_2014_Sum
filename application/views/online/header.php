@@ -46,7 +46,7 @@
         </button>
         <a href="<?=site_url()?>" class="navbar-brand">百度菁英俱乐部</a>
     </div>
-
+s
 
     <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
@@ -69,7 +69,6 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="<?=site_url('online_question/scores')?>">查看成绩</a></li>
-                    <li><a href="#">啦啦啦啦</a></li>
                     <li class="divider"></li>
                     <li id="exit"><a href="<?=site_url('online_question/exit_login')?>">退出</a></li>
                 </ul>
