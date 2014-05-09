@@ -40,7 +40,7 @@ class Search_competition extends CI_Controller {
 			$session = NULL;
 		}
 		$this->load->view('header', $session);
-		$this->load->view('side_bar');
+		// $this->load->view('side_bar');
 		$this->load->view($page, $data);
 		$this->load->view('footer');
 	}

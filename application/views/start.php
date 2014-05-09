@@ -1,28 +1,29 @@
-	<!--  main -->
-    <div class="col-xs-10 main" id="main">
+        <!--  main  -->
 
-        <div>
-            <h3><b>线上</b>答题入口</h3>
+    <div class="row" id="head">
 
-            <a class="btn btn-success" href="<?=site_url('/online_question/index')?>" target="_blank">开始</a>
-        </div>        
-        <div>
-            <h3><b>线下</b>答题入口</h3>
+        <div class="jumbotron">
+            <br/>
+            <div class="container" >
+                <h1>百度校园推广搜索大赛</h1>
+                <h3>准备好了吗？</h3>
+                <h3>接下来，就是见证搜索的时刻。</h3>
+                <br />
+                <p class="center">
+                    <a href="<?=site_url('online_question/index')?>" class="btn white_btn">线上答题入口</a>
+                    <a href="<?=site_url('offline_question/index')?>" class="btn white_btn">线下答题入口</a>
+                </p>
 
-            <a class="btn btn-success" href="<?=site_url('/offline_question/index')?>" target="_blank">开始</a>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
     </div>
-</div>
 
-<br />
-<br />
-	<!-- /main -->
+    <div class="row">
+        <a href="<?=site_url('online_question/index')?>" class="btn whole light_blue">线上答题入口</a>
+    </div>
+
+    <div class="row">
+        <a href="<?=site_url('offline_question/index')?>" class="btn whole light_red">线下答题入口</a>
+    </div>
+
+    	<!-- /main -->
