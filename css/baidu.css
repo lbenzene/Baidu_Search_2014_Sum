@@ -1,0 +1,295 @@
+
+h1{
+    text-align: center;
+    color: #000;
+    margin: 20px 0;
+}
+
+body{
+    font-size: 12px;
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    background-color: transparent;
+    overflow: auto;
+}
+
+div#head{
+  background-color: #112244;
+  box-shadow: 1px 1px 2px #000;
+}
+
+div#head > div.container > h1,
+div#head > div.container > h3,
+div#head > div.container > p,
+div#head > div.jumbotron > div.container > h1,
+div#head > div.jumbotron > div.container > h3,
+div#head > div.jumbotron > div.container > p{
+  color: #fff;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+
+}
+
+div#head > div.container > h1,
+div#head > div.jumbotron > div.container > h1{
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div#head > div.container > h3,
+div#head > div.jumbotron > div.container > h3{
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  div#head > div.container > h1,
+  div#head > div.jumbotron > div.container > h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+
+  div#head > div.container > h3,
+  div#head > div.jumbotron > div.container > h3{
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+a.white_btn{
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1px;
+  background-color: transparent;
+  color: #fff;
+
+  -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
+     -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
+       -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
+          transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+a.white_btn:hover,
+a.white_btn:focus{
+  background-color: #fff;
+  color: #000;
+}
+
+a.whole{
+  border-style: none;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+
+
+  -webkit-transition:background-color 0.2s linear, color 0.2s linear; /* Safari 和 Chrome */
+     -moz-transition:background-color 0.2s linear, color 0.2s linear; /* Firefox 4 */
+       -o-transition:background-color 0.2s linear, color 0.2s linear; /* Opera */
+          transition:background-color 0.2s linear, color 0.2s linear;
+}
+
+a.whole:hover,
+a.whole:focus{
+  background-color: #c0c0ff;
+  color: #fff;
+}
+
+div.main > div{
+    padding: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+}
+
+@media (max-width: 767px) {
+  div.main > div{
+      padding: 10px 30px;
+  }
+}
+
+div.row > div > h1,
+div.row > div > h3,
+div.row > div > p{
+  margin: 12px 0 0 0;
+  line-height: 150%; 
+  color: #000;
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+
+}
+
+div.row > div > h3{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.row > div > h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+div.row > div > p,
+div.row > div > ol > li > p,
+div.row > div > ul > li > p{
+    margin: 10px 0 0 0;
+    line-height: 150%; 
+    color: #000;
+    font-size: 14px;
+}
+
+div.row > div > p.info{
+    display: block;
+    border-color: #888;
+    border-width: 1px;
+    border-style: dashed;
+    background-color: transparent;
+    margin: 0 10px auto;
+    padding: 5px 20px;
+
+    color: #555;
+
+}
+
+
+div.container{
+    font-family:  '微软雅黑';
+}
+
+div.single_choice_answer{
+    display: block;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+    border-width:  0;
+    background-color: transparent;
+    margin:  2px auto;
+}
+
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    vertical-align: middle;
+}
+
+.right{
+    text-align: right;
+}
+
+li.side_bar{
+    /* lbenzene */
+    border-width: 0px;
+    font-size: 18px;
+    padding-top: 10px;
+    font-family: '微软雅黑';
+    text-align: center;
+}
+
+li.side_bar > a{
+    color: #000000;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+
+    border-style: none;
+    border-width: 0px;
+
+}
+
+li.side_bar > a:hover,
+li.side_bar > a:focus {
+  text-decoration: none;
+  background-color: #AABBFF;
+  color: #c00000;
+}
+
+div.login_form{
+    padding: 30px 10px;
+}
+div.login{
+    padding: 40px;
+    margin: 10px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;   
+            border-radius: 5px;
+    background-color: #ebebeb;
+}
+div.login_group{
+
+}
+label.login_label{
+    display: block;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background: url("<?=base_url('img/login_icon.png')?>") no-repeat;
+    z-index: 20;
+}
+
+label.login_label_username{
+    background-position: 0 -68px;
+}
+
+label.login_label_password{
+    background-position: 0 -147px;
+}
+
+div.login_group > p > input.form-control{
+    width: 100%;
+}
+
+
+div.login_right{
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
+/* footer style*/
+div.footer{
+  text-align: center;
+
+  background-color: #ebebeb;
+}
+
+footer > p{
+    font-size: 8px;
+    color: #666;
+}
+
+footer > hr{
+    width: 50%;
+    text-align: left;
+    color: #666;
+}
+
+
+/* color define*/
+
+.light_blue{
+  background-color: #ddeeff;
+}
+
+.light_red{
+  background-color: #ffddee;
+}
+
+/*transition*/

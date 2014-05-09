@@ -1,12 +1,15 @@
     <!--  footer  -->
-<br />
-<div class="container center">
-    <footer>
-    <p> 浙江大学企业俱乐部联合会百度俱乐部 & 浙江大学学生博雅国学社</p>
+    <div class="row footer">
+        <div class="container">
+            <footer>
+                <hr />
+                <p>主办方：浙江大学企业俱乐部联合会百度俱乐部</p>
+                <p>合作方：浙江大学学生博雅国学社</p>
 
-    <p>Copyright © 2014 ZJU <a href="http://baiduzju.org">Baidu Club</a>. All Rights Reserved</p>
-    </footer>
-</div>
+                <p>Copyright © 2014 ZJU <a href="http://baiduzju.org">Baidu Club</a>. All Rights Reserved</p>
+            </footer>
+        </div>
+    </div>
 
 
 <script src="<?=base_url('js/jQuery.js')?>"></script>

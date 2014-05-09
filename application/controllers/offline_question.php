@@ -23,7 +23,6 @@ class Offline_question extends CI_Controller {
 		}
 
 		$this->load->view('offline/header', $session);
-		$this->load->view('offline/side_bar');
 		$this->load->view('offline/'.$page, $data);
 		$this->load->view('offline/footer');
 	}

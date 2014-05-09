@@ -12,8 +12,9 @@
             <h1>报名</h1>
 <!--------------------------action---------------------------->        
 
-             <form id="reg_form" class="form-horizontal" role="form" method="post" autocomplete="OFF" 
-                   action="{{url}}">
+            <form id="reg_form" class="form-horizontal" role="form" method="post" autocomplete="OFF" 
+                   action="">
+            {%csrf_token%}
  
 <!--                 <?php echo form_open('form'); ?> -->
                     <!--基本信息板块-->
@@ -21,9 +22,15 @@
 
                 <div class="input-group">
                     <span class="input-group-addon">帐号</span>
-                    <input name="username" type="text" class="form-control" placeholder=" 帐号" 
+                    <input name="{{userform.username.html_name}}" type="text" class="form-control" placeholder=" 帐号" 
                             value="" size="50">
                 </div>
+                
+                {% if userform.username.error %}
+                <div>
+                {{userform.username.error}}
+                </div>
+                {% endif %}
 
                 <div class="input-group">
                     <span class="input-group-addon">密码</span>
@@ -40,7 +47,6 @@
                 <br />
                 <br />
 
-
                 <br />
                 <br />
 
@@ -48,8 +54,7 @@
                 <p class="tmumber left"><span class="label label-success">个人信息</span></p>
                 <div class="input-group">
                     <span class="input-group-addon">姓名</span>
-                    <input type="text" class="form-control" placeholder=" 姓名" name="name"
-                            value="" size="50">
+                    <input type="text" class="form-control" placeholder=" 姓名" name="{{proform.username.html_name}}">
                 </div>
                 
                 <div class="input-group">

@@ -25,7 +25,6 @@ class Online_question extends CI_Controller {
 		}
 
 		$this->load->view('online/header', $session);
-		$this->load->view('online/side_bar');
 		$this->load->view('online/'.$page, $data);
 		$this->load->view('online/footer');
 	}
