@@ -22,9 +22,7 @@
             <h1>???</h1>
         </div>
         <div class="container" id="online">
-            <h3>登录</h3>
-
-            <a href="<?=site_url('online/login')?>"></a>
+            <h3><a href="<?=site_url('online_question/login')?>" class="btn btn-primary">登录</a></h3>
         </div>
         
         <div class="container" id="online">

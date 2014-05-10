@@ -815,3 +815,20 @@
     $(this).closest('.modal').trigger('close');
   });
 })(jQuery);
+
+
+
+$("#login_username").focus(function(){
+    $("#login_username_label").css("background-position", "0 -96px");
+});
+$("#login_username").blur(function(){
+    $("#login_username_label").css("background-position", "0 -72px");
+});
+
+$("#login_password").focus(function(){
+    $("#login_password_label").css("background-position", "0 -168px");
+});
+$("#login_password").blur(function(){
+    $("#login_password_label").css("background-position", "0 -144px");
+});
+

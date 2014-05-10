@@ -21,7 +21,7 @@
         <div class="container main login_form">
             <div class="col-md-6">
                 <div class="login">
-                <form class="form-horizontal login_form" action="<?=site_url('offline_question/check_login')?>" 
+                <form class="login_form" action="<?=site_url('offline_question/check_login')?>" 
                     method="post" autocomplete="off">
                     <div class="login_group">
                         <h3 class="center">线上大赛登录</h3>

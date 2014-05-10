@@ -64,11 +64,11 @@ class Search_competition extends CI_Controller {
 		// $this->form_validation->set_rules('email', 'Email', 'required');
 		$reg_rules = array(
 						array(
-							'field' => 'username',
+							'field' => '{{userform.username.html_name}}',
 							'label' => 'lang:Username',
 							'rules' => 'trim|required|min_length[5]|max_length[12]|callback_name_used()|xss_clean'), 
 						array(
-							'field' => 'password',
+							'field' => '{{userform.password.html_name}}',
 							'label' => 'Password',
 							'rules' => 'trim|required|matches[passconf]|md5'),
 		);

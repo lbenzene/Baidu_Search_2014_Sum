@@ -1,14 +1,8 @@
-<?php #test 
-//setcookie("user", "Alex"/*$username*/, time()+3600*12)
-?>
-
-
 <!--
-*************************************************
-*                百度搜索大赛专用
-*                      ~~~
-*
-*************************************************
+|-百度校园推广搜索大赛-
+|主办方：浙江大学企业俱乐部联合会百度俱乐部
+|合作方：浙江大学学生博雅国学社
+|Copyright © 2014 ZJU Baidu Club. All Rights Reserved
 -->
 
 <!DOCTYPE HTML>
@@ -23,6 +17,48 @@
 <link rel="stylesheet" href="<?=base_url('css/square/grey.css')?>" >
 <link rel="shortcut icon" href="<?=base_url('img/shortcut.jpg')?>">
 <link rel="stylesheet" href="<?=base_url('css/baidu.css')?>" >
+
+<style type="text/css">
+
+label.form_label{
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background: url("<?=base_url('img/form_icon.png')?>") no-repeat;
+    z-index: 20;
+}
+
+label.form_label_phone{
+    background-position: 0 0;
+}
+label.form_label_phone_error{
+    background-position: 0 -48px;
+}
+label.form_label_user{
+    background-position: 0 -72px;
+}
+label.form_label_user_error{
+    background-position: 0 -120px;
+}
+label.form_label_password{
+    background-position: 0 -144px;
+}
+label.form_label_password_error{
+    background-position: 0 -192px;
+}
+label.form_label_id{
+    background-position: 0 -216px;
+}
+label.form_label_id_error{
+    background-position: 0 -264px;
+}
+
+</style>
 
 </head>
 

@@ -1,9 +1,8 @@
-
 <!--
-|
-|
-|
-|
+|-百度校园推广搜索大赛-
+|主办方：浙江大学企业俱乐部联合会百度俱乐部
+|合作方：浙江大学学生博雅国学社
+|Copyright © 2014 ZJU Baidu Club. All Rights Reserved
 -->
 
 <!DOCTYPE HTML>
@@ -30,16 +29,16 @@ label.login_label{
     height: 24px;
     overflow: hidden;
     padding: 0 0 0 24px;
-    background: url("<?=base_url('img/login_icon.png')?>") no-repeat;
+    background: url("<?=base_url('img/form_icon.png')?>") no-repeat;
     z-index: 20;
 }
 
 label.login_label_username{
-    background-position: 0 -68px;
+    background-position: 0 -72px;
 }
 
 label.login_label_password{
-    background-position: 0 -147px;
+    background-position: 0 -144px;
 }
 </style>
 
