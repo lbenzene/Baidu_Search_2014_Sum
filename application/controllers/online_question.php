@@ -12,16 +12,8 @@
 
 		function load_view($page, $data = NULL)
 		{
-			$login = $this->session->userdata('login');
-			if ( $login ) 
-			{
-				$session = $this->session->all_userdata();
-			}
-			else
-			{
-				$session = NULL;
-			}
-
+			$session = $this->session->all_userdata();
+			
 			$this->load->view('online/header', $session);
 			$this->load->view('online/'.$page, $data);
 			$this->load->view('online/footer');

@@ -1,43 +1,3 @@
-<?php
-//test var
-$choice_qst = array(
-    "1" => array(  
-            "qst_content" => "AAAA",
-            "qst_answerA" => "choose me",
-            "qst_answerB" => "choose A",
-            "qst_answerC" => "choose me",
-            "qst_answerD" => "not me",
-            "qst_select" => "A",
-    ),
-
-    "2" => array(  
-            "qst_content" => "if (condition) {
-                # code...
-            }<br />atcasesort(
-                so\0\.\'\;\natcasesort(
-                    )')",
-            "qst_answerA" => "choose me",
-            "qst_answerB" => "choose A",
-            "qst_answerC" => "choose me",
-            "qst_answerD" => "not me",
-             "qst_select" => "B",           
-    )
-);
-
-$filling_qst = array(
-    "1" => array(
-        "qst_content" => "特特姐",
-        "qst_answer" => "请回答"
-    ),
-
-    "2" => array(
-        "qst_content" => "MISS 特特？",
-        "qst_answer" => "请回答"
-    ),
-
-);
-?>
-
         <!--  main  -->
 
     <div class="row" id="head">
@@ -64,24 +24,24 @@ $filling_qst = array(
                     <!-- 单选 -->
                 <h2 class="problem left">一、单选题</h2>
 
-                <?php foreach ($choice_qst as $keys => $question): ?>
-                <form>
-                    <p class="problem left"><?= $keys?>.<?=$question['qst_content']?></p>
+                <?php foreach ($select as $keys => $question): ?>
+                <form action>
+                    <p class="problem left"><?= $keys?>.<?=$question['problem']?></p>
                     <div class="col-md-3 single_choice_answer">
                         <input id="qst<?= $keys?>_answerA" type="radio" name="iCheck" <?= 'A'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerA">A. <?=$question['qst_answerA']?></label>
+                        <label for="qst<?= $keys?>_answerA">A. <?=$question['s_A']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
                         <input id="qst<?= $keys?>_answerB" type="radio" name="iCheck" <?= 'B'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerB">B. <?=$question['qst_answerB']?></label>
+                        <label for="qst<?= $keys?>_answerB">B. <?=$question['s_B']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
                         <input id="qst<?= $keys?>_answerC" type="radio" name="iCheck" <?= 'C'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerC">C. <?=$question['qst_answerC']?></label>
+                        <label for="qst<?= $keys?>_answerC">C. <?=$question['s_C']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
                         <input id="qst<?= $keys?>_answerD" type="radio" name="iCheck" <?= 'D'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerD">D. <?=$question['qst_answerD']?></label>
+                        <label for="qst<?= $keys?>_answerD">D. <?=$question['s_D']?></label>
                     </div>
                     <br />
                 </form>

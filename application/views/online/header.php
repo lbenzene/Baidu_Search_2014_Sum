@@ -83,9 +83,9 @@ label.login_label_password{
         </ul>
 
         <ul class="nav navbar-nav navbar-right nav-pills">
-            <?php if ( isset($login) ) { ?>
+            <?php if ( isset($username_online) ) { ?>
             <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username?><span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username_online?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="<?=site_url('online_question/scores')?>">查看成绩</a></li>
                     <li class="divider"></li>
