@@ -18,12 +18,13 @@
         </div>
     </div>
 
-    <div class="row">
-        <a href="<?=site_url('online_question/index')?>" class="btn whole light_blue">线上答题入口</a>
+    <div class="row light_blue">
+        <a href="<?=site_url('online_question/index')?>" class="btn whole">线上答题入口</a>
     </div>
 
-    <div class="row">
-        <a href="<?=site_url('offline_question/index')?>" class="btn whole light_red">线下答题入口</a>
+    <div class="row light_red">
+        <a href="<?=site_url('offline_question/index')?>" class="btn whole">线下答题入口</a>
+
     </div>
 
     	<!-- /main -->

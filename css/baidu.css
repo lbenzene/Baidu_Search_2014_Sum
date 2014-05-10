@@ -139,22 +139,22 @@ div.row > div > h1{
 div.row > div > p,
 div.row > div > ol > li > p,
 div.row > div > ul > li > p{
-    margin: 10px 0 0 0;
-    line-height: 150%; 
-    color: #000;
-    font-size: 14px;
+  margin: 10px 0 0 0;
+  line-height: 150%; 
+  color: #000;
+  font-size: 14px;
 }
 
 div.row > div > p.info{
-    display: block;
-    border-color: #888;
-    border-width: 1px;
-    border-style: dashed;
-    background-color: transparent;
-    margin: 0 10px auto;
-    padding: 5px 20px;
+  display: block;
+  border-color: #888;
+  border-width: 1px;
+  border-style: dashed;
+  background-color: transparent;
+  margin: 0 10px auto;
+  padding: 5px 20px;
 
-    color: #555;
+  color: #555;
 
 }
 
@@ -164,57 +164,29 @@ div.container{
 }
 
 div.single_choice_answer{
-    display: block;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
-    border-width:  0;
-    background-color: transparent;
-    margin:  2px auto;
+  display: block;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  border-width:  0;
+  background-color: transparent;
+  margin:  2px auto;
 }
 
 
 .left{
-    text-align: left;
+  text-align: left;
 }
 
 .center{
-    text-align: center;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    vertical-align: middle;
+  text-align: center;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  vertical-align: middle;
 }
 
 .right{
-    text-align: right;
-}
-
-li.side_bar{
-    /* lbenzene */
-    border-width: 0px;
-    font-size: 18px;
-    padding-top: 10px;
-    font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
-    text-align: center;
-}
-
-li.side_bar > a{
-    color: #000000;
-    padding: 10px;
-    -webkit-border-radius: 2px;
-       -moz-border-radius: 2px;
-            border-radius: 2px;
-
-    border-style: none;
-    border-width: 0px;
-
-}
-
-li.side_bar > a:hover,
-li.side_bar > a:focus {
-  text-decoration: none;
-  background-color: #AABBFF;
-  color: #c00000;
+  text-align: right;
 }
 
 div.login_form{
@@ -228,46 +200,30 @@ div.login{
             border-radius: 5px;
     background-color: #ebebeb;
 }
-div.login_group{
 
-}
-label.login_label{
-    display: block;
-    position: absolute;
-    margin-top: 4px;
-    margin-left: 6px;
-    width: 0;
-    height: 24px;
-    overflow: hidden;
-    padding: 0 0 0 24px;
-    background: url("<?=base_url('img/login_icon.png')?>") no-repeat;
-    z-index: 20;
-}
-
-label.login_label_username{
-    background-position: 0 -68px;
-}
-
-label.login_label_password{
-    background-position: 0 -147px;
-}
 
 div.login_group > p > input.form-control{
     width: 100%;
 }
 
+input#login_password,
+input#login_username{
+  padding-left: 36px;  
+}
 
 div.login_right{
     height: 100%;
     vertical-align: middle;
 }
 
+input.login_submit{
+  width: 100%;
+}
 
 
 /* footer style*/
 div.footer{
   text-align: center;
-
   background-color: #ebebeb;
 }
 

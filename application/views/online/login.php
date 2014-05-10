@@ -22,7 +22,7 @@
             <div class="col-md-6">
                 <div class="login">
                 <form class="form-horizontal login_form" action="<?=site_url('online_question/check_login')?>" 
-                    method="post" autocomplete="on">
+                    method="post" autocomplete="off">
                     <div class="login_group">
                         <h3 class="center">线上大赛登录</h3>
 
@@ -39,7 +39,7 @@
                         </p>
                         <p class="right"><a href="" >忘记密码？</a></p>              
                         <p>
-                            <input type="submit" class="btn btn-success" value="登录" style="width:100%"/>
+                            <input type="submit" class="btn btn-success login_submit" value="登录" style="width:100%"/>
                         </p>
                     </div>
                 </form>

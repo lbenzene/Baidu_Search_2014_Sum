@@ -45,7 +45,6 @@
         <a href="<?=site_url()?>" class="navbar-brand">百度菁英俱乐部</a>
     </div>
 
-
     <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
             <li title="首页">

@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 
     $(".pinned").pin({
-        containerSelector: ".container", minWidth: 940
+        containerSelector: ".container", minWidth: 940;
     });
 
     $("#login_username").focus(function(){
@@ -45,6 +45,7 @@ $(document).ready(function(){
     $("#login_password").blur(function(){
         $("#login_password_label").css("background-position", "0 -147px");
     });
+
 
 });
 

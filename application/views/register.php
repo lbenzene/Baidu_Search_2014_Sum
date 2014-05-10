@@ -26,7 +26,7 @@
      
     <!--                 <?php echo form_open('form'); ?> -->
                         <!--基本信息板块-->
-                    <h3 class="left"><span class="label label-success">帐号信息</span></h3>
+                    <h3 class="left"><span class="label label-success"><span class="glyphicon glyphicon-align-left"></span> 帐号信息</span></h3>
 
                     <div class="input-group">
                         <span class="input-group-addon">帐号</span>
@@ -49,12 +49,8 @@
                     <br />
                     <br />
 
-
-                    <br />
-                    <br />
-
                     <!-- 根据人数刷新表单？ -->
-                    <p class="tmumber left"><span class="label label-success">个人信息</span></p>
+                    <p class="tmumber left"><span class="label label-success"><span class="glyphicon glyphicon-align-left"></span>个人信息</span></p>
                     <div class="input-group">
                         <span class="input-group-addon">姓名</span>
                         <input type="text" class="form-control" placeholder=" 姓名" name="name"
@@ -71,12 +67,7 @@
                         <!--/基本信息板块-->
                 
                 
-                    <br/>
-                    <div class="input-group">
-                        <span class="input-group-addon">????</span>
-                        <input type="text" class="form-control" placeholder="????" name="_????">
-                    </div>
-                
+                    <br/>                
                     <div class="checkbox" class="left">
                         <label>
                             <input name="_check" type="checkbox" >
@@ -87,7 +78,7 @@
                     <br />
                 
                 
-                    <button id="submit_button" type="submit" class="btn btn-default">Submit</button>
+                    <input id="submit_button" type="submit" class="btn btn-default" value="提交">
                 </form>
 
                 <br />

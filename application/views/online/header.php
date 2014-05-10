@@ -1,14 +1,9 @@
-<?php #test 
-//setcookie("user", "Alex"/*$username*/, time()+3600*12)
-?>
-
 
 <!--
-*************************************************
-*                百度搜索大赛专用
-*                      ~~~
-*
-*************************************************
+|
+|
+|
+|
 -->
 
 <!DOCTYPE HTML>
@@ -23,6 +18,31 @@
 <link rel="stylesheet" href="<?=base_url('css/square/grey.css')?>" >
 <link rel="shortcut icon" href="<?=base_url('img/shortcut.jpg')?>">
 <link rel="stylesheet" href="<?=base_url('css/baidu.css')?>" >
+
+<style type="text/css">
+
+label.login_label{
+    display: block;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 6px;
+    width: 0;
+    height: 24px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background: url("<?=base_url('img/login_icon.png')?>") no-repeat;
+    z-index: 20;
+}
+
+label.login_label_username{
+    background-position: 0 -68px;
+}
+
+label.login_label_password{
+    background-position: 0 -147px;
+}
+</style>
+
 
 </style>
 
@@ -46,7 +66,7 @@
         </button>
         <a href="<?=site_url()?>" class="navbar-brand">百度菁英俱乐部</a>
     </div>
-s
+
 
     <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">

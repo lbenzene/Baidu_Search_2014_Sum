@@ -39,7 +39,7 @@
                         </p>
                         <p class="right"><a href="" >忘记密码？</a></p>              
                         <p>
-                            <input type="submit" class="btn btn-success" value="登录" style="width:100%"/>
+                            <input type="submit" class="btn btn-success login_submit" value="登录" style="width:100%"/>
                         </p>
                     </div>
                 </form>

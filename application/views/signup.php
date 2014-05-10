@@ -81,7 +81,7 @@
                     <br />
                 
                 
-                    <button id="submit_button" type="submit" class="btn btn-default">Submit</button>
+                    <input id="submit_button" type="submit" class="btn btn-default" value="提交"> 
                 </form>
 
                 <br />

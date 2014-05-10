@@ -19,14 +19,12 @@
 
     <div class="row main">
         <div class="container">
-                <h1>百度校园推广搜索大赛</h1>
-                <h3>本次百度校园推广搜索大赛分为<a href="#noline">线上活动</a>和<a href="#online">线上活动</a>两方面。</h3>
+            <h1>???</h1>
         </div>
         <div class="container" id="online">
-            <h3>线上活动</h3>
+            <h3>登录</h3>
 
-            <p>同学们登陆线上活动答题网站，注册账号并在5.17（周六）~5.18（周日）的每天晚上21:00-23:00内进行答题，题目总共分为2套（每套30题，每天一套）。</p>
-            <p>在活动中以正确解答的题数进行排名（排名在每天活动时间结束后实时更新），排名位于前6名的同学将会得到百度菁英俱乐部准备的小奖品。</p>
+            <a href="<?=site_url('online/login')?>"></a>
         </div>
         
         <div class="container" id="online">
