@@ -64,7 +64,7 @@ div.bottom_info > div.logo{
 
 </head>
 
-<body>
+<body  onload="timedCount()">
 
         <!-- 顶部标题栏  -->
 

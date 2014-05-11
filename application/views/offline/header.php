@@ -62,7 +62,7 @@ label.login_label_password{
 
 </head>
 
-<body>
+<body  onload="timedCount()">
 
         <!-- 顶部标题栏  -->
 

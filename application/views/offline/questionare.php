@@ -81,6 +81,7 @@
     </div>
 
     <script type="text/javascript">
+        var t;
         var minutes = 0;
         var seconds = 0;
         function checkTime(i)
@@ -89,9 +90,9 @@
                 {i="0" + i}
             return i
         }
-        var t = function timedCount()
+        function timedCount()
         {
-            document.getElementById('time').value = checkTime(minutes)+"："+checkTime(seconds);
+            document.getElementById('time').innerHTML = checkTime(minutes)+"："+checkTime(seconds);
             seconds++;
             if ( seconds>=60 ) 
             {
