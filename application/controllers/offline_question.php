@@ -85,6 +85,7 @@
 				if ($this->session->userdata('username_offline')!=NULL) {
 					$data['select'] = $this->question_model->get_offline_select_question_by_mark($mark);
 					$data['blank']	= $this->question_model->get_offline_blank_question_by_mark($mark);
+					$data['mark'] = $mark;
 					$this->load_view('questionare',$data);
 				}	else {
 					redirect('offline_question/login');
@@ -92,6 +93,20 @@
 			}
 		}
 
+		public function check_answer($mark)
+		{
+			if ($this->session->userdata('username_offline')!=NULL) {
+				//$check_data = $this->input->post('data',TRUE)
+				$data['total_score'] = 0;
+				$data['total_score'] += $this->question_model->check_offline_select_answer($mark,$check_data);
+				$data['total_score'] += $this->question_model->check_offline_blank_answer($mark,$check_data);
+				if ($data['total_score'] == 10) 
+					$data['total_score'] += 2;
+				$this->load_view('result',$data);
+			}	else {
+				redirect('offline_question/login');
+			}
+		}
 	}
 
 	/* End of file welcome.php */
