@@ -353,17 +353,45 @@ div.bottom_info{
   box-shadow: -1px 0 1px 1px rgba(0,0,0, 0.25);
   color: #7F7F7F;
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
-  font-size: 0.9em;
   font-weight: bold;
   z-index: 5;
 }
 
-div.bottom_info > div.logo{
-  vertical-align: center;
+div.bottom_info > div.bottom_logo{
+  margin: 5px 5px 5px 10px;
   text-align: center;
+  height: 40px;
+  width: 40px;
+  background: none;
+  position: relative;
+  float: left;
 }
 
-div.bottom_info > div.logo > a{
-  height: 35px;
-  width: 35px;
+div.bottom_info > div.bottom_brand{
+  margin: 5px ;
+  text-align: center;
+  height: 40px;
+  background: none;
+  position: relative;
+  float: left;
+
+  text-align: left;
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+div.bottom_info > div.timing{
+  margin: 10px 50px 5px 10px;
+  text-align: center;
+  height: 40px;
+  background: none;
+  position: relative;
+  float: right;
+
+  text-align: right;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  color: #444;
 }

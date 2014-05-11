@@ -16,16 +16,17 @@
             </div>
         </div>
     </div>
-
-    <div class="row light_grey">
+    
+    <div class="row">
         <div class="container center">
-            <h1>退出成功</h1>
-            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('offline_question/index')?>">首页</a></h3>
+            <h1>提交成功</h1>
+            <h1>本套题组得分：<? $total_score?></h1>
+            <h3>点击<a href="<?=site_url('offline_question/select')?>">这里</a>返回答题界面</h3>
+            <h3>或者点击<a href="<?=site_url('offline_question/index')?>">这里</a>返回首页面</h3>
         </div>
+
     </div>
 
-    <br />
-    <br />
     <script type="text/javascript">
 
         // window.location.assign('<?=site_url()?>');
@@ -34,7 +35,7 @@
         var t3 = setTimeout("document.getElementById('timing').innerHTML='2';",3000);
         var t4 = setTimeout("document.getElementById('timing').innerHTML='1';",4000);
 
-        var t5 = setTimeout("window.location.assign('<?=site_url(offline_question/index)?>');",5000);
+        var t5 = setTimeout("window.location.assign('<?=site_url('offline_question/start')?>');",5000);
 
     </script>
         <!--  /main  -->

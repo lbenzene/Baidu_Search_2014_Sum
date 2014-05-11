@@ -53,6 +53,10 @@ label.login_label_username{
 label.login_label_password{
     background-position: 0 -144px;
 }
+
+div.bottom_info > div.logo{
+    background: url("<?=base_url('img/logo.png')?>") no-repeat;
+}
 </style>
 
 

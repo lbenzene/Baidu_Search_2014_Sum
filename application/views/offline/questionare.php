@@ -10,7 +10,7 @@
                 <h3>在这里你可以尽情展现你自己的答案</h3>
                 <br />
                 <p class="center">
-                    <a href="#offline" class="btn white_btn">线下大赛</a>
+                    <a href="<?=site_url('offline_question/index')?>" class="btn white_btn">线下大赛首页</a>
                 </p>
 
             </div>
@@ -74,5 +74,31 @@
         <!--  bottom_info part  -->
     <div class="bottom_info">
         <div class="bottom_logo"><a href="<?=site_url('offline_question/index')?>"></a></div>
+        <div class="bottom_brand">Baidu Club</div>
 
+
+        <div class="timing" >本套题组所用时间 <b id="time">0：0</b></div>
     </div>
+
+    <script type="text/javascript">
+        var minutes = 0;
+        var seconds = 0;
+        function checkTime(i)
+        {
+            if (i<10) 
+                {i="0" + i}
+            return i
+        }
+        var t = function timedCount()
+        {
+            document.getElementById('time').value = checkTime(minutes)+"："+checkTime(seconds);
+            seconds++;
+            if ( seconds>=60 ) 
+            {
+                seconds = 0;
+                minutes++;
+            }
+            t = setTimeout("timedCount()",1000);
+        }
+
+    </script>
