@@ -17,14 +17,11 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="container main">
-            <p>退出成功</p>
-            <p></p>
-            <p id="timing">5</p>
-            <p>秒后返回首页</p>
+    <div class="row light_grey">
+        <div class="container center">
+            <h1>退出成功</h1>
+            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('offline_question/index')?>">首页</a></h3>
         </div>
-     
     </div>
 
     <br />
@@ -32,10 +29,10 @@
     <script type="text/javascript">
 
         // window.location.assign('<?=site_url()?>');
-        var t1 = setTimeout("document.getElementByID('timing').innerHTML='4';",1000);
-        var t2 = setTimeout("document.getElementByID('timing').innerHTML='3';",2000);
-        var t3 = setTimeout("document.getElementByID('timing').innerHTML='2';",3000);
-        var t4 = setTimeout("document.getElementByID('timing').innerHTML='1';",4000);
+        var t1 = setTimeout("document.getElementById('timing').innerHTML='4';",1000);
+        var t2 = setTimeout("document.getElementById('timing').innerHTML='3';",2000);
+        var t3 = setTimeout("document.getElementById('timing').innerHTML='2';",3000);
+        var t4 = setTimeout("document.getElementById('timing').innerHTML='1';",4000);
 
         var t5 = setTimeout("window.location.assign('<?=site_url(offline_question/index)?>');",5000);
 

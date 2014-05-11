@@ -86,7 +86,7 @@ label.login_label_password{
                 <a href="<?=site_url('online_question/index')?>">线上</a>
             </li>
             <li title="答题">
-                <a href="<?= isset($login)
+                <a href="<?= isset($login_online)
                             ?site_url('online_question/start')
                             :site_url('online_question/login')?>">开始答题</a>
             </li>
@@ -102,10 +102,11 @@ label.login_label_password{
                 </form>
             </li>
 
-            <?php if ( isset($username_online) ) { ?>
+            <?php if ( isset($login_online) ) { ?>
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username_online?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
+                    <li><a href="<?=site_url('online_question/slect')?>">开始答题</a></li>
                     <li><a href="<?=site_url('online_question/scores')?>">查看成绩</a></li>
                     <li class="divider"></li>
                     <li id="exit"><a href="<?=site_url('online_question/exit_login')?>">退出</a></li>

@@ -17,14 +17,11 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="container main">
-            <p>退出成功</p>
-            <p></p>
-            <p id="timing">5</p>
-            <p>秒后返回首页</p>
+    <div class="row light_grey">
+        <div class="container center">
+            <h1>退出成功</h1>
+            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('online_question/index')?>">首页</a></h3>
         </div>
-     
     </div>
 
     <br />

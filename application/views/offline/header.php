@@ -104,8 +104,8 @@ label.login_label_password{
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username_offline?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
+                    <li><a href="<?=site_url('offline_question/slect')?>">开始答题</a></li>
                     <li><a href="<?=site_url('offline_question/scores')?>">查看成绩</a></li>
-                    <li><a href="#">啦啦啦啦</a></li>
                     <li class="divider"></li>
                     <li id="exit"><a href="<?=site_url('offline_question/exit_login')?>">退出</a></li>
                 </ul>

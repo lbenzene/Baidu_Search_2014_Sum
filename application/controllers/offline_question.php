@@ -17,7 +17,7 @@
 				$session = $this->session->all_userdata();
 				$session['login_offline'] = 1;
 			}
-				else
+			else
 			{
 				$session = NULL;
 			}

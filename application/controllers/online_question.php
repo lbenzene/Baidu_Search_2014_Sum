@@ -15,7 +15,7 @@
 			if ( $this->session->userdata('username_online') != NULL ) 
 			{
 				$session = $this->session->all_userdata();
-				$session['login'] = 1;
+				$session['login_online'] = 1;
 			}
 			else
 			{
