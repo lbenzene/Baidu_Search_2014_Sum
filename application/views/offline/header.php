@@ -34,6 +34,19 @@ label.login_label{
     z-index: 20;
 }
 
+label.search_label{
+    display: block;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 4px;
+    width: 0;
+    height: 20px;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    background: url("<?=base_url('img/search.png')?>") no-repeat;
+    z-index: 20;
+}
+
 label.login_label_username{
     background-position: 0 -72px;
 }
@@ -81,6 +94,12 @@ label.login_label_password{
         </ul>
 
         <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+                <form action="http://www.baidu.com/s" class="header_search" target="_blank" method="get">
+                    <label class="search_label">搜索</label><input name="wd" type="text" maxlength="20" />
+                </form>
+            </li>
+
             <?php if ( isset($login) ) { ?>
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username?><span class="caret"></span></a>

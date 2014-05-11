@@ -1,6 +1,6 @@
 
 h1{
-  margin: 12px 0 0 0;
+  margin: 16px 0;
   line-height: 150%; 
   color: #000;
   letter-spacing: 2px;
@@ -273,3 +273,58 @@ footer > hr{
   background-color: #f0f0f0;
 }
 /*transition*/
+
+
+
+
+
+form.header_search,
+form.header_search > input,
+form.header_search > label{
+  background-color: transparent;
+  display: block;
+}
+
+form.header_search{
+  vertical-align: middle;
+  padding-top: 14px;
+  padding-bottom: 12px;
+  height: 20px;
+  border: 0 none;
+}
+
+form.header_search > input{
+  width: 70px;
+  height: 20px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  color: #ebebeb;
+  background-color: #444;
+  font-family: inherit;
+  outline: none;
+  border: 0 none;
+  border-radius: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+          tap-highlight-color: rgba(0,0,0,0);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.25) inset;
+  -webkit-transition: 0.4s ease-in-out; /* Safari and Chrome */
+     -moz-transition: 0.4s ease-in-out; /* Firefox 4 */
+       -o-transition: 0.4s ease-in-out; /* Opera */
+          transition: 0.4s ease-in-out;
+}
+
+form.header_search > input:focus{
+  width: 140px;
+  color: #232323;
+  background-color: #ebebeb;
+}
+
+@media (max-width: 767px){
+form.header_search,
+form.header_search > input,
+form.header_search > label{
+  background-color: transparent;
+  display: none;
+}
+}
