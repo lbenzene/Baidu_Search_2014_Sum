@@ -23,10 +23,9 @@
                 <br />
                     <!-- 单选 -->
                 
-                <form action="<?=site_url('offline_question/check_answer/$mark')?>">
+                <form action="<?=site_url('offline_question/check_answer/'.$mark)?>" method="post">
                     <h3 class="problem left">单选题:</h3>
                     <?php foreach ($select as $keys => $question): ?>
-                    <form>
                         <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
                         <div class="col-md-3 single_choice_answer">
                             <input id="qst<?= $keys?>_answerA" type="radio" name="s_a_<?= $keys?>"/>
@@ -45,7 +44,6 @@
                             <label for="qst<?= $keys?>_answerD"><?=$question['s_d']?></label>
                         </div>
                         <br />
-                    </form>
                     <?php endforeach; ?>
 
                     <br />

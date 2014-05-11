@@ -30,45 +30,45 @@ class Question_model extends CI_Model
     	return $data;
     }
     
-    private function check_online_select_answer($mark,$check_data) {
+    public function check_online_select_answer($mark,$check_data) {
         $this->db->select('answer')->order_by('id','inc');
         $query = $this->db->get('online_problem_'.$mark.'_select');
         $data = $query->result_array();
         $score = 0;
-        for ($i=0; $i<count($check_data); $i++) {
+        for ($i=0; $i<count($data); $i++) {
             if ($data[$i]['answer'] == $check_data[$i]['answer']) $score++;
         }
         return $score;
     } 
 
-    private function check_offline_select_answer($mark,$check_data) {
+    public function check_offline_select_answer($mark,$check_data) {
         $this->db->select('answer')->order_by('id','inc');
         $query = $this->db->get('offline_problem_'.$mark.'_select');
         $data = $query->result_array();
         $score = 0;
-        for ($i=0; $i<count($check_data); $i++) {
+        for ($i=0; $i<count($data); $i++) {
             if ($data[$i]['answer'] == $check_data[$i]['answer']) $score++;
         }
         return $score;
     } 
 
-    private function check_online_blank_answer($mark,$check_data) {
+    public function check_online_blank_answer($mark,$check_data) {
         $this->db->select('answer')->order_by('id','inc');
         $query = $this->db->get('online_problem_'.$mark.'_blank');
         $data = $query->result_array();
     	$score = 0;
-        for ($i=0; $i<count($check_data); $i++) {
+        for ($i=0; $i<count($data); $i++) {
             if ($data[$i]['answer'] == $check_data[$i]['answer']) $score++;
         }
         return $score;
     }
 
-    private function check_offline_blank_answer($mark,$check_data) {
+    public function check_offline_blank_answer($mark,$check_data) {
         $this->db->select('answer')->order_by('id','inc');
         $query = $this->db->get('offline_problem_'.$mark.'_blank');
         $data = $query->result_array();
         $score = 0;
-        for ($i=0; $i<count($check_data); $i++) {
+        for ($i=0; $i<count($data); $i++) {
             if ($data[$i]['answer'] == $check_data[$i]['answer']) $score++;
         }
         return $score;
