@@ -19,7 +19,7 @@
     
     <div class="row">
         <div class="container center">
-            <h1>欢迎您，<?=$username_offline?></h1>
+            <h1>欢迎您，<?=$username?></h1>
             <h3><b id="timing">5</b>秒后返回答题界面</h3>
             <h3>或者点击<a href="<?=site_url('offline_question/index')?>">这里</a>返回首页</h3>
         </div>
