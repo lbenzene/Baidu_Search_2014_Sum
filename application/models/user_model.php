@@ -2,7 +2,7 @@
 
 class User_model extends CI_Model 
 {
-    function check_user_and_password_online($username)
+    function check_user_and_password_online($username,$password)
     {
         $this->db->where('username',$username);
         $this->db->where('password',md5($password));
@@ -14,7 +14,7 @@ class User_model extends CI_Model
             return 0;
     }
 
-    function check_user_and_password_offline($username)
+    function check_user_and_password_offline($username,$password)
     {
         $this->db->where('username',$username);
         $this->db->where('password',md5($password));
