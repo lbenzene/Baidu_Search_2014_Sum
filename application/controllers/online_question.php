@@ -85,6 +85,7 @@
 				if ($this->session->userdata('username_online')!=NULL) {
 					$data['select'] = $this->question_model->get_online_select_question_by_mark($mark);
 					$data['blank']	= $this->question_model->get_online_blank_question_by_mark($mark);
+					$data['mark'] = $mark;
 					$this->load_view('questionare',$data);
 				}	else {
 					redirect('online_question/login');
@@ -92,6 +93,26 @@
 			}
 		}
 
+		public function check_answer($mark)
+		{
+			if ($this->session->userdata('username_online')!=NULL) {
+				$data['total_score'] = 0;
+
+				for($i=0; $i<10; $i++)
+					$check_data[$i]['answer'] = $this->input->post('answer_'.$i,TRUE);
+				$data['total_score'] += $this->question_model->check_online_select_answer($mark,$check_data);
+				
+				for($i=0; $i<10; $i++)
+					$check_data[$i]['answer'] = $this->input->post('answer_'.$i,TRUE);
+				$data['total_score'] += $this->question_model->check_online_blank_answer($mark,$check_data);
+				
+				if ($data['total_score'] == 10) 
+					$data['total_score'] += 2;
+				$this->load_view('result',$data);
+			}	else {
+				redirect('online_question/login');
+			}
+		}
 	}
 
 /* End of file welcome.php */

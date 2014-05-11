@@ -20,7 +20,7 @@
     <div class="row light_grey">
         <div class="container main">
             <br />
-            <form action="<?=site_url('online_question/check_answer/$mark')?>">
+            <form action="<?=site_url('online_question/check_answer/'.$mark)?>">
                 <!-- 单选 -->
                 <h3 class="problem">单选题:</h3>
                 <?php foreach ($select as $keys => $question): ?>
@@ -43,7 +43,6 @@
                         <label for="qst<?=$question['id']?>_answerD"><?=$question['s_d']?></label>
                     </div>
                 </div>
-
                 <br />
                 <?php endforeach; ?>
 
@@ -52,8 +51,8 @@
                 <h3 class="problem left">填空题:</h3>
                 <?php foreach ($blank as $keys => $question): ?>
                 <div>
-                <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
-                <input name="b_answer_<?=$keys?>" type="text" class="form-control" />
+                <p class="problem left"><?=$question['id']?>.<?=$question['problem']?></p>
+                <input name="b_answer_<?=$question['id']?>" type="text" class="form-control" />
                 <br />
                 </div>
                 <?php endforeach; ?>

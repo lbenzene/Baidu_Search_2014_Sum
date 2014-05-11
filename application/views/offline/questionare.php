@@ -21,7 +21,7 @@
         <div class="container main">
             <br />
                 
-            <form action="<?=site_url('offline_question/check_answer/$mark')?>">
+            <form action="<?=site_url('offline_question/check_answer/'.$mark)?>">
                 <!-- 单选 -->
                 <h3 class="problem">单选题:</h3>
                 <?php foreach ($select as $keys => $question): ?>
@@ -52,8 +52,8 @@
                 <h3 class="problem left">填空题:</h3>
                 <?php foreach ($blank as $keys => $question): ?>
                 <div>
-                <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
-                <input name="answer<?=$keys?>" type="text" 
+                <p class="problem left"><?=$question['id']?>.<?=$question['problem']?></p>
+                <input name="answer<?=$question['id']?>" type="text" 
                     class="form-control" />
                 <br />
                 </div>
