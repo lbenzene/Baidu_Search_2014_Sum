@@ -84,7 +84,7 @@ label.login_label_password{
                 <a href="<?=site_url('offline_question/index')?>">线下</a>
             </li>
             <li title="答题">
-                <a href="<?= isset($login)
+                <a href="<?= isset($login_offline)
                             ?site_url('offline_question/start')
                             :site_url('offline_question/login')?>">开始答题</a>
             </li>
@@ -100,9 +100,9 @@ label.login_label_password{
                 </form>
             </li>
 
-            <?php if ( isset($login) ) { ?>
+            <?php if ( isset($login_offline) ) { ?>
             <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username?><span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username_offline?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="<?=site_url('offline_question/scores')?>">查看成绩</a></li>
                     <li><a href="#">啦啦啦啦</a></li>
