@@ -23,24 +23,27 @@
             <form action="<?=site_url('online_question/check_answer/$mark')?>">
                 <!-- 单选 -->
                 <h3 class="problem">单选题:</h3>
-                <?php foreach ($select as$keys => $question): ?>
-                <p class="problem"><?=$keys+1?>.<?=$question['problem']?></p>
-                <div class="col-md-3 single_choice_answer">
-                    <input id="qst<?=$keys?>_answerA" type="radio" name="s_answer_<?=$keys?>"/>
-                    <label for="qst<?=$keys?>_answerA"><?=$question['s_a']?></label>
+                <?php foreach ($select as $keys => $question): ?>
+                <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
+                <div class="row">
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerA" type="radio" name="s_<?=$question['id']?>"/>
+                        <label for="qst<?=$question['id']?>_answerA"><?=$question['s_a']?></label>
+                    </div>
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerB" type="radio" name="s_<?=$question['id']?>"/>
+                        <label for="qst<?=$question['id']?>_answerB"><?=$question['s_b']?></label>
+                    </div>
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerC" type="radio" name="s_<?=$question['id']?>"/>
+                        <label for="qst<?=$question['id']?>_answerC"><?=$question['s_c']?></label>
+                    </div>
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerD" type="radio" name="s_<?=$question['id']?>"/>
+                        <label for="qst<?=$question['id']?>_answerD"><?=$question['s_d']?></label>
+                    </div>
                 </div>
-                <div class="col-md-3 single_choice_answer">
-                    <input id="qst<?=$keys?>_answerB" type="radio" name="s_answer_<?=$keys?>"/>
-                    <label for="qst<?=$keys?>_answerB"><?=$question['s_b']?></label>
-                </div>
-                <div class="col-md-3 single_choice_answer">
-                    <input id="qst<?=$keys?>_answerC" type="radio" name="s_answer_<?=$keys?>"/>
-                    <label for="qst<?=$keys?>_answerC"><?=$question['s_c']?></label>
-                </div>
-                <div class="col-md-3 single_choice_answer">
-                    <input id="qst<?=$keys?>_answerD" type="radio" name="s_answer_<?=$keys?>"/>
-                    <label for="qst<?=$keys?>_answerD"><?=$question['s_d']?></label>
-                </div>
+
                 <br />
                 <?php endforeach; ?>
 
@@ -70,9 +73,14 @@
                 </div>
             </div> 
 -->
-        
-
+            <br />
         </div>
 
     </div>
         <!--  /main  -->
+
+        <!--  bottom_info part  -->
+    <div class="bottom_info">
+
+
+    </div>
