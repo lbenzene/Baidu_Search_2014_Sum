@@ -1,7 +1,7 @@
 <?php //test vars
 $user = array(
     '1' => array(
-                'username' => 'test1',
+                'username' => 'test',
                 'scores' => '100',
                 'times' => '600'
                 ),
