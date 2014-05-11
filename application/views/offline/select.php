@@ -25,16 +25,16 @@
             
         <div class="container">
             <p class="center">
-                <a class="btn btn-success" href="<?=site_url('offline_question/questionare/1')?>" target="_blank">第一套</a>
-                <a class="btn btn-success" href="<?=site_url('offline_question/questionare/2')?>" target="_blank">第二套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/3')?>" target="_blank">第三套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/4')?>" target="_blank">第四套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/5')?>" target="_blank">第五套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/6')?>" target="_blank">第六套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/7')?>" target="_blank">第七套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/8')?>" target="_blank">第八套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/9')?>" target="_blank">第九套</a>
-                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/10')?>" target="_blank">第十套</a>
+                <a class="btn btn-success" href="<?=site_url('offline_question/questionare/0')?>" target="_blank">第一套</a>
+                <a class="btn btn-success" href="<?=site_url('offline_question/questionare/1')?>" target="_blank">第二套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/2')?>" target="_blank">第三套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/3')?>" target="_blank">第四套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/4')?>" target="_blank">第五套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/5')?>" target="_blank">第六套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/6')?>" target="_blank">第七套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/7')?>" target="_blank">第八套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/8')?>" target="_blank">第九套</a>
+                <a class="btn btn-primary" href="<?=site_url('offline_question/questionare/9')?>" target="_blank">第十套</a>
             </p>
             <hr>
             <div class="progress">

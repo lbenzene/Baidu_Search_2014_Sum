@@ -49,7 +49,7 @@ $user = array(
                 </thead>
                 <?php #user会改变
                 foreach ($user as $key => $user_scores):?>
-                <tr <?php if (isset($login)) if ($user_scores['username'] === $username) echo 'class="active" id="mine"';?>>
+                <tr <?php if (isset($login)) if ($user_scores['username'] === $username_offline) echo 'class="active" id="mine"';?>>
                     <td style="width:10%"><?=$key?></td>
                     <td><?=$user_scores['username']?></td>
                     <td><?=$user_scores['scores']?></td>

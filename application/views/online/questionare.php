@@ -25,23 +25,23 @@
                 <h2 class="problem left">一、单选题</h2>
 
                 <?php foreach ($select as $keys => $question): ?>
-                <form action>
-                    <p class="problem left"><?= $keys?>.<?=$question['problem']?></p>
+                <form>
+                    <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?= $keys?>_answerA" type="radio" name="iCheck" <?= 'A'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerA">A. <?=$question['s_A']?></label>
+                        <input id="qst<?= $keys?>_answerA" type="radio" name="iCheck"/>
+                        <label for="qst<?= $keys?>_answerA">A. <?=$question['s_a']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?= $keys?>_answerB" type="radio" name="iCheck" <?= 'B'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerB">B. <?=$question['s_B']?></label>
+                        <input id="qst<?= $keys?>_answerB" type="radio" name="iCheck"/>
+                        <label for="qst<?= $keys?>_answerB">B. <?=$question['s_b']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?= $keys?>_answerC" type="radio" name="iCheck" <?= 'C'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerC">C. <?=$question['s_C']?></label>
-                    </div>
+                        <input id="qst<?= $keys?>_answerC" type="radio" name="iCheck"/>
+                        <label for="qst<?= $keys?>_answerC">C. <?=$question['s_c']?></label>
+                    </div>  
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?= $keys?>_answerD" type="radio" name="iCheck" <?= 'D'===$question['qst_select']? 'checked': ''?>/>
-                        <label for="qst<?= $keys?>_answerD">D. <?=$question['s_D']?></label>
+                        <input id="qst<?= $keys?>_answerD" type="radio" name="iCheck"/>
+                        <label for="qst<?= $keys?>_answerD">D. <?=$question['s_d']?></label>
                     </div>
                     <br />
                 </form>
@@ -50,11 +50,11 @@
                 <br />
                 <h2 class="problem left">二、填空题</h2>
 
-                <?php foreach ($filling_qst as $keys => $question): ?>
+                <?php foreach ($blank as $keys => $question): ?>
                 <div>
-                <p class="problem left"><?= $keys?>.<?=$question['qst_content']?></p>
+                <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
                 <input name="answer<?= $keys?>" type="text" 
-                    class="form-control" value="<?=$question['qst_answer']?>" />
+                    class="form-control" />
                 <br />
                 </div>
                 <?php endforeach; ?>

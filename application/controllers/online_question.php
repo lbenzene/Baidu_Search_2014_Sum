@@ -11,9 +11,17 @@
 		}
 
 		function load_view($page, $data = NULL)
-		{
-			$session = $this->session->all_userdata();
-			
+		{	
+			if ( $this->session->userdata('username_online') != NULL ) 
+			{
+				$session = $this->session->all_userdata();
+				$session['login'] = 1;
+			}
+			else
+			{
+				$session = NULL;
+			}
+
 			$this->load->view('online/header', $session);
 			$this->load->view('online/'.$page, $data);
 			$this->load->view('online/footer');
@@ -45,7 +53,8 @@
 			$password = $this->input->post('password',TRUE);
 			if ($this->user_model->check_user_and_password_online($username,$password)){
 				$this->session->set_userdata('username_online',$username);
-				$this->load_view('login_success');
+				$data['username'] = $username;
+				$this->load_view('login_success',$data);
 			}	else {
 				redirect('online_question/login');
 			}
@@ -60,10 +69,14 @@
 		//答题部分
 		public function start()
 		{
-			$this->load_view('select');
+			if ($this->session->userdata('username_online')!=NULL) {	
+				$this->load_view('select');	
+			}	else {
+				redirect('online_question/login');
+			}
 		}
 
-		public function questionare($mark)
+		public function questionare($mark = 0)
 		{
 			if (!is_numeric($mark)) $mark = 0;
 			if ($mark < 0 || $mark > 5) {

@@ -12,12 +12,12 @@
 
 		function load_view($page, $data = NULL)
 		{
-			$login = $this->session->userdata('login');
-			if ( $login ) 
+			if ( $this->session->userdata('username_offline') != NULL ) 
 			{
 				$session = $this->session->all_userdata();
+				$session['login_offline'] = 1;
 			}
-			else
+				else
 			{
 				$session = NULL;
 			}
@@ -53,7 +53,8 @@
 			$password = $this->input->post('password',TRUE);
 			if ($this->user_model->check_user_and_password_offline($username,$password)) {
 				$this->session->set_userdata('username_offline',$username);
-				$this->load_view('login_success');
+				$data['username'] = $username;
+				$this->load_view('login_success',$data);
 			}	else {
 				redirect('offline_question/login');
 			}
@@ -68,10 +69,14 @@
 		//答题部分
 		public function start()
 		{
-			$this->load_view('select');
+			if ($this->session->userdata('username_offline')!=NULL) {	
+				$this->load_view('select');	
+			}	else {
+				redirect('offline_question/login');
+			}
 		}
 
-		public function questionare($mark)
+		public function questionare($mark = 0)
 		{
 			if (!is_numeric($mark)) $mark = 0;
 			if ($mark < 0 || $mark > 9) {
