@@ -28,19 +28,19 @@
                 <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
                 <div class="row">
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerA" type="radio" name="s_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerA" type="radio" name="s_answer_<?=$question['id']?>"/>
                         <label for="qst<?=$question['id']?>_answerA"><?=$question['s_a']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerB" type="radio" name="s_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerB" type="radio" name="s_answer_<?=$question['id']?>"/>
                         <label for="qst<?=$question['id']?>_answerB"><?=$question['s_b']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerC" type="radio" name="s_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerC" type="radio" name="s_answer_<?=$question['id']?>"/>
                         <label for="qst<?=$question['id']?>_answerC"><?=$question['s_c']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerD" type="radio" name="s_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerD" type="radio" name="s_answer_<?=$question['id']?>"/>
                         <label for="qst<?=$question['id']?>_answerD"><?=$question['s_d']?></label>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                 <?php foreach ($blank as $keys => $question): ?>
                 <div>
                 <p class="problem left"><?=$question['id']?>.<?=$question['problem']?></p>
-                <input name="answer<?=$question['id']?>" type="text" 
+                <input name="b_answer_<?=$question['id']?>" type="text" 
                     class="form-control" />
                 <br />
                 </div>

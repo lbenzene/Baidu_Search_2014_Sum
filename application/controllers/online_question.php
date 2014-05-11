@@ -99,11 +99,11 @@
 				$data['total_score'] = 0;
 
 				for($i=0; $i<10; $i++)
-					$check_data[$i]['answer'] = $this->input->post('answer_'.$i,TRUE);
+					$check_data[$i]['answer'] = $this->input->post('s_answer_'.$i,TRUE);
 				$data['total_score'] += $this->question_model->check_online_select_answer($mark,$check_data);
 				
 				for($i=0; $i<10; $i++)
-					$check_data[$i]['answer'] = $this->input->post('answer_'.$i,TRUE);
+					$check_data[$i]['answer'] = $this->input->post('b_answer_'.$i,TRUE);
 				$data['total_score'] += $this->question_model->check_online_blank_answer($mark,$check_data);
 				
 				if ($data['total_score'] == 10) 
