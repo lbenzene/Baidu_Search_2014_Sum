@@ -25,7 +25,6 @@
 
 
                     <div>
-                        <label>队名</label>
                         <label for="{{userform.username.id_for_lebal}}" id="form_label_username{% if userform.username.error %}_error{% endif %}" 
                             class="form_label form_label_user{% if userform.username.errors %}_error{% endif %}">队名</label>
                         <input name="{{userform.username.html_name}}" id="form_username" type="text" 
@@ -64,6 +63,7 @@
 
                     <br />
                         <!-- 1 -->
+                    <hr />    
                     <br />
                     <p>搜索组选手</p>
                     <div>

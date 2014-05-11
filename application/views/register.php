@@ -24,12 +24,11 @@
                         <!--基本信息板块-->
 
 
-                    <div>
-                        <label>学号</label>
+                    <div class="has-error">
                         <label for="{{userform.username.id_for_lebal}}" id="form_label_username{% if userform.username.error %}_error{% endif %}" 
                             class="form_label form_label_user{% if userform.username.errors %}_error{% endif %}">学号</label>
                         <input name="{{userform.username.html_name}}" id="form_username" type="text" 
-                            class="form-control form_padding {% if userform.username.errors %} has-error {% endif %}" placeholder="学号" />
+                            class="form-control form_padding {% if userform.username.errors %}  {% endif %}" placeholder="学号" />
                     </div>
                     {% if userform.username.errors %}
                     <div class="callback_error">
@@ -62,6 +61,7 @@
                     {% endif %}
 
                     <br />
+                    <hr />
                     <br />
 
                     <div>
