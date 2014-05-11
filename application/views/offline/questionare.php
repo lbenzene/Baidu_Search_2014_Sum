@@ -73,6 +73,6 @@
 
         <!--  bottom_info part  -->
     <div class="bottom_info">
-
+        <div class="bottom_logo"><a href="<?=site_url('offline_question/index')?>"></a></div>
 
     </div>

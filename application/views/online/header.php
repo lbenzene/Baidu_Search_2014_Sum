@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="<?=base_url('css/bootstrap.css')?> ">
 <link rel="stylesheet" href="<?=base_url('css/square/grey.css')?>" >
-<link rel="shortcut icon" href="<?=base_url('img/shortcut.jpg')?>">
+<link rel="shortcut icon" href="<?=base_url('img/shortcut.ico')?>">
 <link rel="stylesheet" href="<?=base_url('css/baidu.css')?>" >
 
 <style type="text/css">

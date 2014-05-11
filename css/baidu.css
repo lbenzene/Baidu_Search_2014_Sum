@@ -359,5 +359,11 @@ div.bottom_info{
 }
 
 div.bottom_info > div.logo{
+  vertical-align: center;
+  text-align: center;
+}
 
+div.bottom_info > div.logo > a{
+  height: 35px;
+  width: 35px;
 }
