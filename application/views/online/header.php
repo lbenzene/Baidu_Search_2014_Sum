@@ -46,6 +46,10 @@ label.search_label{
     z-index: 20;
 }
 
+div.bottom_info > div.bottom_logo{
+    background: url("<?=base_url('img/logo.png')?>") no-repeat;
+}
+
 label.login_label_username{
     background-position: 0 -72px;
 }

@@ -28,19 +28,23 @@
                 <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
                 <div class="row">
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerA" type="radio" name="s_answer_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerA" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="A" />
                         <label for="qst<?=$question['id']?>_answerA"><?=$question['s_a']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerB" type="radio" name="s_answer_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerB" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="B" />
                         <label for="qst<?=$question['id']?>_answerB"><?=$question['s_b']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerC" type="radio" name="s_answer_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerC" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="C" />
                         <label for="qst<?=$question['id']?>_answerC"><?=$question['s_c']?></label>
                     </div>
                     <div class="col-md-3 single_choice_answer">
-                        <input id="qst<?=$question['id']?>_answerD" type="radio" name="s_answer_<?=$question['id']?>"/>
+                        <input id="qst<?=$question['id']?>_answerD" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="D" />
                         <label for="qst<?=$question['id']?>_answerD"><?=$question['s_d']?></label>
                     </div>
                 </div>
