@@ -27,8 +27,7 @@
         
         <div class="container" id="online">
             <h3>线上活动</h3>
-            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳</a><a href="<?=site_url('search_competition/rules')?>" class="btn btn-default">报名请点</a>           
-</p>
+            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳</a>   </p>
         </div>
         <div class="container">
 

@@ -121,9 +121,9 @@ div.bottom_info > div.logo{
                 </ul>
             </li>
             <?php } else { ?>
-                <li title="登录">
-                    <a href="<?=site_url('online_question/login')?>">登录</a>
-                </li>            
+            <li title="登录">
+                <a href="<?=site_url('online_question/login')?>">登录</a>
+            </li>            
             <?php } ?>
         </ul>
     </nav>

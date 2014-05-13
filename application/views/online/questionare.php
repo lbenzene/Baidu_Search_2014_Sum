@@ -65,17 +65,7 @@
                 <p>恭喜你已经回答玩了</p>
                 <input type="submit" value="提交答案" class="btn btn-success" />
             </form>
-
-
-<!-- 
-            <div class="p_right pinned">
-                <div class="note">
-                <h3>Time</h3>
-                <p>56:32</p>
-
-                </div>
-            </div> 
--->
+            
             <br />
         </div>
 
@@ -92,7 +82,8 @@
     </div>
 
     <script type="text/javascript">
-        var t
+        var t;
+        var time = <?=$time?>;
         var minutes = 0;
         var seconds = 0;
         function checkTime(i)

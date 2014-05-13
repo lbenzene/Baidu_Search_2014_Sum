@@ -34,7 +34,7 @@
         var t3 = setTimeout("document.getElementById('timing').innerHTML='2';",3000);
         var t4 = setTimeout("document.getElementById('timing').innerHTML='1';",4000);
 
-        var t5 = setTimeout("window.location.assign('<?=site_url(offline_question/index)?>');",5000);
+        var t5 = setTimeout("window.location.assign('<?=site_url('offline_question/index')?>');",5000);
 
     </script>
         <!--  /main  -->
