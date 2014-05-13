@@ -832,3 +832,25 @@ $("#login_password").blur(function(){
     $("#login_password_label").css("background-position", "0 -144px");
 });
 
+/*var t;
+var minutes = 0;
+var seconds = 0;
+function checkTime(i)
+{
+    if (i<10) 
+        {i="0" + i}
+    return i
+}
+function timedCount()
+{
+    document.getElementById('time').value = checkTime(minutes)+"："+checkTime(seconds);
+    seconds++;
+    if ( seconds>=60 ) 
+    {
+        seconds = 0;
+        minutes++;
+    }
+    t=setTimeout("timedCount()",1000);
+}
+*/
+

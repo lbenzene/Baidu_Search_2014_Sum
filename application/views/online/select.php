@@ -10,7 +10,7 @@
                 <h3>在这里你可以尽情展现你自己的答案</h3>
                 <br />
                 <p class="center">
-                    <a href="#offline" class="btn white_btn">线上大赛</a>
+                    <a href="<?=site_url('online_question/index')?>" class="btn white_btn">线上大赛首页</a>
                 </p>
 
             </div>

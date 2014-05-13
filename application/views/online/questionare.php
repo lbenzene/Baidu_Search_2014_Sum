@@ -10,59 +10,61 @@
                 <h3>在这里你可以尽情展现你自己的答案</h3>
                 <br />
                 <p class="center">
-                    <a href="#online" class="btn white_btn">线上大赛</a>
+                    <a href="<?=site_url('online_question/index')?>" class="btn white_btn">线上大赛首页</a>
                 </p>
 
             </div>
         </div>
     </div>
         <!-- 答题页面 -->
-    <div class="row">
+    <div class="row light_grey">
         <div class="container main">
-            <div class="p_left">
-                <br />
-                    <!-- 单选 -->
-                <form action="<?=site_url('online_question/check_answer/'.$mark)?>" method="post">
-                    <h3 class="problem left">单选题:</h3>
-                    <?php foreach ($select as $keys => $question): ?>
-                        <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
-                        <div class="col-md-3 single_choice_answer">
-                            <input id="qst<?= $keys?>_answerA" type="radio" name="s_a_<?= $keys?>"/>
-                            <label for="qst<?= $keys?>_answerA"><?=$question['s_a']?></label>
-                        </div>
-                        <div class="col-md-3 single_choice_answer">
-                            <input id="qst<?= $keys?>_answerB" type="radio" name="s_b_<?= $keys?>"/>
-                            <label for="qst<?= $keys?>_answerB"><?=$question['s_b']?></label>
-                        </div>
-                        <div class="col-md-3 single_choice_answer">
-                            <input id="qst<?= $keys?>_answerC" type="radio" name="s_c_<?= $keys?>"/>
-                            <label for="qst<?= $keys?>_answerC"><?=$question['s_c']?></label>
-                        </div>
-                        <div class="col-md-3 single_choice_answer">
-                            <input id="qst<?= $keys?>_answerD" type="radio" name="s_d_<?= $keys?>"/>
-                            <label for="qst<?= $keys?>_answerD"><?=$question['s_d']?></label>
-                        </div>
-                        <br />
-                    <br />
-                    <?php endforeach; ?>
-
-                    <br />
-                    <h3 class="problem left">填空题:</h3>
-
-                    <?php foreach ($blank as $keys => $question): ?>
-                    <div>
-                    <p class="problem left"><?= $keys+1?>.<?=$question['problem']?></p>
-                    <input name="answer_<?= $keys?>" type="text" 
-                        class="form-control" />
-                    <br />
+            <br />
+            <form action="<?=site_url('online_question/check_answer/'.$mark)?>">
+                <!-- 单选 -->
+                <h3 class="problem">单选题:</h3>
+                <?php foreach ($select as $keys => $question): ?>
+                <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
+                <div class="row">
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerA" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="A" />
+                        <label for="qst<?=$question['id']?>_answerA"><?=$question['s_a']?></label>
                     </div>
-                    <?php endforeach; ?>
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerB" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="B" />
+                        <label for="qst<?=$question['id']?>_answerB"><?=$question['s_b']?></label>
+                    </div>
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerC" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="C" />
+                        <label for="qst<?=$question['id']?>_answerC"><?=$question['s_c']?></label>
+                    </div>
+                    <div class="col-md-3 single_choice_answer">
+                        <input id="qst<?=$question['id']?>_answerD" type="radio" 
+                            name="s_answer_<?=$question['id']?>" value="D" />
+                        <label for="qst<?=$question['id']?>_answerD"><?=$question['s_d']?></label>
+                    </div>
+                </div>
+                <br />
+                <?php endforeach; ?>
 
-                    <br />
-                    <p>恭喜你已经回答玩了</p>
-                    <input type="submit" value="提交" class="btn btn-success" />
-                </form>
-             </div>
+                <br />
+                <!-- 填空 -->
+                <h3 class="problem left">填空题:</h3>
+                <?php foreach ($blank as $keys => $question): ?>
+                <div>
+                <p class="problem left"><?=$question['id']?>.<?=$question['problem']?></p>
+                <input name="b_answer_<?=$question['id']?>" type="text" class="form-control" />
+                <br />
+                </div>
+                <?php endforeach; ?>
+
+                <br />
+                <p>恭喜你已经回答玩了</p>
+                <input type="submit" value="提交答案" class="btn btn-success" />
+            </form>
 
 
 <!-- 
@@ -74,9 +76,41 @@
                 </div>
             </div> 
 -->
-        
-
+            <br />
         </div>
 
     </div>
         <!--  /main  -->
+
+        <!--  bottom_info part  -->
+    <div class="bottom_info">
+        <div class="bottom_logo"><a href="<?=site_url('offline_question/index')?>"></a></div>
+        <div class="bottom_brand">Baidu Club</div>
+
+
+        <div class="timing" >本套题组所用时间 <b id="time">00：00</b></div>
+    </div>
+
+    <script type="text/javascript">
+        var t
+        var minutes = 0;
+        var seconds = 0;
+        function checkTime(i)
+        {
+            if (i<10) 
+                {i="0" + i}
+            return i
+        }
+        function timedCount()
+        {
+            document.getElementById('time').innerHTML = checkTime(minutes)+"："+checkTime(seconds);
+            seconds++;
+            if ( seconds>=60 ) 
+            {
+                seconds = 0;
+                minutes++;
+            }
+            t = setTimeout("timedCount()",1000);
+        }
+
+    </script>

@@ -10,21 +10,18 @@
                 <h3>在这里你可以尽情展现你自己的答案</h3>
                 <br />
                 <p class="center">
-                    <a href="#online" class="btn white_btn">线下大赛</a>
+                    <a href="<?=site_url('online_question/index')?>" class="btn white_btn">线上大赛首页</a>
                 </p>
 
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="container main">
-            <p>退出成功</p>
-            <p></p>
-            <p id="timing">5</p>
-            <p>秒后返回首页</p>
+    <div class="row light_grey">
+        <div class="container center">
+            <h1>退出成功</h1>
+            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('online_question/index')?>">首页</a></h3>
         </div>
-     
     </div>
 
     <br />

@@ -321,10 +321,77 @@ form.header_search > input:focus{
 }
 
 @media (max-width: 767px){
-form.header_search,
-form.header_search > input,
-form.header_search > label{
-  background-color: transparent;
-  display: none;
+  form.header_search,
+  form.header_search > input,
+  form.header_search > label{
+    background-color: transparent;
+    display: none;
+  }
 }
+
+
+
+/*
+ *  .bottom_info part
+ *   including timing part
+ *
+ */
+
+div.bottom_info{
+    /* position */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+
+
+  background-image: -webkit-linear-gradient( rgba(242, 242, 242, 0.9), rgba(222, 222, 222, 0.9));
+  box-shadow: -1px 0 1px 1px rgba(0,0,0, 0.25);
+  color: #7F7F7F;
+  font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
+  font-weight: bold;
+  z-index: 5;
+}
+
+div.bottom_info > div.bottom_logo{
+  margin: 5px 5px 5px 10px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  background: none;
+  position: relative;
+  float: left;
+}
+
+div.bottom_info > div.bottom_brand{
+  margin: 5px ;
+  text-align: center;
+  height: 40px;
+  background: none;
+  position: relative;
+  float: left;
+
+  text-align: left;
+  font-family: inherit;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+div.bottom_info > div.timing{
+  margin: 10px 50px 5px 10px;
+  text-align: center;
+  height: 40px;
+  background: none;
+  position: relative;
+  float: right;
+
+  text-align: right;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  color: #444;
 }

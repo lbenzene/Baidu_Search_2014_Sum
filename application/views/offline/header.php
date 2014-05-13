@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="<?=base_url('css/bootstrap.css')?> ">
 <link rel="stylesheet" href="<?=base_url('css/square/grey.css')?>" >
-<link rel="shortcut icon" href="<?=base_url('img/shortcut.jpg')?>">
+<link rel="shortcut icon" href="<?=base_url('img/shortcut.ico')?>">
 <link rel="stylesheet" href="<?=base_url('css/baidu.css')?>" >
 
 
@@ -47,6 +47,10 @@ label.search_label{
     z-index: 20;
 }
 
+div.bottom_info > div.bottom_logo{
+    background: url("<?=base_url('img/logo.png')?>") no-repeat;
+}
+
 label.login_label_username{
     background-position: 0 -72px;
 }
@@ -58,7 +62,7 @@ label.login_label_password{
 
 </head>
 
-<body>
+<body  onload="timedCount()">
 
         <!-- 顶部标题栏  -->
 
@@ -104,8 +108,8 @@ label.login_label_password{
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username_offline?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
+                    <li><a href="<?=site_url('offline_question/slect')?>">开始答题</a></li>
                     <li><a href="<?=site_url('offline_question/scores')?>">查看成绩</a></li>
-                    <li><a href="#">啦啦啦啦</a></li>
                     <li class="divider"></li>
                     <li id="exit"><a href="<?=site_url('offline_question/exit_login')?>">退出</a></li>
                 </ul>
