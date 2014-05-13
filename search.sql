@@ -15,6 +15,30 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
   `username` varchar(50) NOT NULL,
   `password` varchar(60) NOT NULL,
   `first_name` varchar(20) NOT NULL,
+  `score` int(10) NOT NULL DEFAULT '0',
+  `offline` int(11) NOT NULL DEFAULT '0',
+  `online` int(11) NOT NULL DEFAULT '0',
+  `starttime0` int(100) DEFAULT NULL,
+  `endtime` int(100) DEFAULT NULL,
+  `starttime1` int(100) DEFAULT NULL,
+  `starttime2` int(100) DEFAULT NULL,
+  `starttime3` int(100) DEFAULT NULL,
+  `starttime4` int(100) DEFAULT NULL,
+  `starttime5` int(100) DEFAULT NULL,
+  `starttime6` int(100) DEFAULT NULL,
+  `starttime7` int(100) DEFAULT NULL,
+  `starttime8` int(100) DEFAULT NULL,
+  `starttime9` int(100) DEFAULT NULL,
+  `endtime0` int(100) DEFAULT NULL,
+  `endtime1` int(100) DEFAULT NULL,
+  `endtime2` int(100) DEFAULT NULL,
+  `endtime3` int(100) DEFAULT NULL,
+  `endtime4` int(100) DEFAULT NULL,
+  `endtime5` int(100) DEFAULT NULL,
+  `endtime6` int(100) DEFAULT NULL,
+  `endtime7` int(100) DEFAULT NULL,
+  `endtime8` int(100) DEFAULT NULL,
+  `endtime9` int(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -22,9 +46,9 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 -- 转存表中的数据 `auth_user`
 --
 
-INSERT INTO `auth_user` (`id`, `username`, `password`, `first_name`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'single'),
-(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'group');
+INSERT INTO `auth_user` (`id`, `username`, `password`, `first_name`, `score`, `offline`, `online`, `starttime0`, `endtime`, `starttime1`, `starttime2`, `starttime3`, `starttime4`, `starttime5`, `starttime6`, `starttime7`, `starttime8`, `starttime9`, `endtime0`, `endtime1`, `endtime2`, `endtime3`, `endtime4`, `endtime5`, `endtime6`, `endtime7`, `endtime8`, `endtime9`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'single', 16, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, NULL, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL),
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'group', 1, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, NULL, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -521,23 +545,23 @@ CREATE TABLE IF NOT EXISTS `online_problem_0_blank` (
   `answer` text NOT NULL,
   `id` bigint(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `online_problem_0_blank`
 --
 
-INSERT INTO `online_problem_0_blank` (`problem`, `answer`) VALUES
-('首位获得奥斯卡最佳女主角奖的黑人演员是(全名,不加分隔符)_____','哈利贝瑞'),
-('台湾巨星胡慧中是内地著名演员__________的姨奶奶.','孙俪'),
-('著名歌手张咪的弟媳是歌手__________','黄绮珊'),
-('_________是亚洲歌手中第一个创下吉尼斯世界纪录的人.','刘德华'),
-('王菲、李亚鹏倡导发起了__________天使基金,用于资助家庭贫困身患唇腭裂的患者.','嫣然'),
-('2014年5月2日《舌尖上的中国》第二季中的“挂面爷爷”张世新老人因病去世,他因做_________的技艺高超而获此美称.','空心挂面'),
-('最近大热的韩国男子组合EXO中有___位中国籍成员','3'),
-('日本童星___________将出演真人版一休','铃木福'),
-('《霍比特人》第三部正式由《去而复返》改名为(4字,不加书名号)','五军之战'),
-('柏林电影节的首位华人影帝是评凭借电影________(不加书名号)而获奖的中国内地男演员______','白日焰火;廖凡');
+INSERT INTO `online_problem_0_blank` (`problem`, `answer`, `id`) VALUES
+('首位获得奥斯卡最佳女主角奖的黑人演员是(全名,不加分隔符)_____', '哈利贝瑞', 1),
+('台湾巨星胡慧中是内地著名演员__________的姨奶奶.', '孙俪', 2),
+('著名歌手张咪的弟媳是歌手__________', '黄绮珊', 3),
+('_________是亚洲歌手中第一个创下吉尼斯世界纪录的人.', '刘德华', 4),
+('王菲、李亚鹏倡导发起了__________天使基金,用于资助家庭贫困身患唇腭裂的患者.', '嫣然', 5),
+('2014年5月2日《舌尖上的中国》第二季中的“挂面爷爷”张世新老人因病去世,他因做_________的技艺高超而获此美称.', '空心挂面', 6),
+('最近大热的韩国男子组合EXO中有___位中国籍成员', '3', 7),
+('日本童星___________将出演真人版一休', '铃木福', 8),
+('《霍比特人》第三部正式由《去而复返》改名为(4字,不加书名号)', '五军之战', 9),
+('柏林电影节的首位华人影帝是评凭借电影________(不加书名号)而获奖的中国内地男演员______', '白日焰火;廖凡', 10);
 
 -- --------------------------------------------------------
 
@@ -554,7 +578,7 @@ CREATE TABLE IF NOT EXISTS `online_problem_0_select` (
   `s_c` varchar(150) NOT NULL,
   `s_d` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -567,23 +591,24 @@ CREATE TABLE IF NOT EXISTS `online_problem_1_blank` (
   `answer` text NOT NULL,
   `id` bigint(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `online_problem_1_blank`
 --
 
-INSERT INTO `online_problem_1_blank` (`problem`, `answer`) VALUES
-('名侦探柯南剧场版中,片场最长的是________(数字)年上映的','2008'),
-('名侦探柯南中白鸟警官的女朋友初登场在TV__________(数字)集','112'),
-('江户川柯南的妈妈现居住于__________(城市名,三字)','洛杉矶'),
-('铃木园子的男朋友是___________,他的故乡在_____________(城市名,前者3字,后者2字)','京极真;伊豆'),
-('仓木麻衣为名侦探柯南演唱的第一首歌曲是(无大写)___________________','secret of my heart'),
-('远山和叶的手机型号是(品牌+空格+型号)','索爱 W508'),
-('工藤新一伦敦表白的日期是(数字)____月_____日','7;1'),
-('名侦探柯南中元太的声优还为柯南中的______________(全名)配音','高木涉'),
-('名侦探柯南中,变小药的代号是(不用加符号)_____________','APTX4869'),
-('黑衣组织中,琴酒的座驾是(品牌+空格+型号)_______________','保时捷 356A');
+INSERT INTO `online_problem_1_blank` (`problem`, `answer`, `id`) VALUES
+('名侦探柯南剧场版中,片场最长的是________(数字)年上映的', '2008', 1),
+('名侦探柯南中白鸟警官的女朋友初登场在TV__________(数字)集', '112', 2),
+('江户川柯南的妈妈现居住于__________(城市名,三字)', '洛杉矶', 3),
+('铃木园子的男朋友是___________,他的故乡在_____________(城市名,前者3字,后者2字)', '京极真;伊豆', 4),
+('仓木麻衣为名侦探柯南演唱的第一首歌曲是(无大写)___________________', 'secret of my heart', 5),
+('远山和叶的手机型号是(品牌+空格+型号)', '索爱 W508', 6),
+('工藤新一伦敦表白的日期是(数字)____月_____日', '7;1', 7),
+('名侦探柯南中元太的声优还为柯南中的______________(全名)配音', '高木涉', 8),
+('名侦探柯南中,变小药的代号是(不用加符号)_____________', 'APTX4869', 9),
+('黑衣组织中,琴酒的座驾是(品牌+空格+型号)_______________', '保时捷 356A', 10);
+
 -- --------------------------------------------------------
 
 --
@@ -599,7 +624,7 @@ CREATE TABLE IF NOT EXISTS `online_problem_1_select` (
   `s_c` varchar(150) NOT NULL,
   `s_d` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -612,23 +637,24 @@ CREATE TABLE IF NOT EXISTS `online_problem_2_blank` (
   `answer` text NOT NULL,
   `id` bigint(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `online_problem_2_blank`
 --
 
-INSERT INTO `online_problem_2_blank` (`problem`, `answer`) VALUES
-('第一位华人图灵奖获得者是?','姚期智'),
-('Dota 2中可以同时偷取三种属性的英雄是(5个字)?','鱼人夜行者'),
-('叫兽易小星的原名是?','易振兴'),
-('在《三国志》中,唯一一个在“万军中取敌将首级”的武将是?','关羽'),
-('海洋中最多的生物物种是?(四个字)','浮游生物'),
-('全基因组鸟枪法测序的提出者的英文名是?(注意大小写,有空格)','Craig Venter'),
-('至今为止成交价格最高的画作是《______》?','1948年第5号'),
-('投入营运后的首次空难的空中客车A330型客机的班机号是(填数字)?','447'),
-('体检项目中的ALT是指?','谷丙转氨酶'),
-('Focal Nodular Hyperplasia的翻译是?','肝脏局灶性结节');
+INSERT INTO `online_problem_2_blank` (`problem`, `answer`, `id`) VALUES
+('第一位华人图灵奖获得者是?', '姚期智', 1),
+('Dota 2中可以同时偷取三种属性的英雄是(5个字)?', '鱼人夜行者', 2),
+('叫兽易小星的原名是?', '易振兴', 3),
+('在《三国志》中,唯一一个在“万军中取敌将首级”的武将是?', '关羽', 4),
+('海洋中最多的生物物种是?(四个字)', '浮游生物', 5),
+('全基因组鸟枪法测序的提出者的英文名是?(注意大小写,有空格)', 'Craig Venter', 6),
+('至今为止成交价格最高的画作是《______》?', '1948年第5号', 7),
+('投入营运后的首次空难的空中客车A330型客机的班机号是(填数字)?', '447', 8),
+('体检项目中的ALT是指?', '谷丙转氨酶', 9),
+('Focal Nodular Hyperplasia的翻译是?', '肝脏局灶性结节', 10);
+
 -- --------------------------------------------------------
 
 --
@@ -644,7 +670,7 @@ CREATE TABLE IF NOT EXISTS `online_problem_2_select` (
   `s_c` varchar(150) NOT NULL,
   `s_d` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -657,22 +683,23 @@ CREATE TABLE IF NOT EXISTS `online_problem_3_blank` (
   `answer` text NOT NULL,
   `id` bigint(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- 转存表中的数据 `online_problem_3_blank`
 --
 
-INSERT INTO `online_problem_3_blank` (`problem`, `answer`) VALUES
-('基于网络的、阻止用户访问网络服务的攻击的英文缩写(注意大小写)为:','DDoS'),
-('一个web开发者如果在linux环境下打算使用PHP,MYSQL,Apache来实现web开发,那么这一套开发环境有一个耳熟能详的缩写名(全大写)为:','LAMP'),
-('最新发行的ubuntu版本号为:','14.04'),
-('有一套所有程序员都特别喜欢的外文书,每本书封面都有一个不同的动物,请问这套书的主编作者是(注意大小写和符号):','O\'Reilly'),
-('如果想实现通过修改header的参数来伪造IP来源为127.0.0.1的话,应该添加一项什么参数(注意大小写和符号)?','X-Forward-For'),
-('一提到sqlmap就会想到什么安全方面的问题(请使用全小写的英文,不同单词间空格隔开)?','sql injection'),
-('XSS原本的英文是指代什么(请使用全小写的英文,不同单词间空格隔开)?','cross site script'),
-('使用git时想要提交代码到远程repository的话,先git add之后应该 git 加上什么指令(小写,一个单词) 然后再git push?','commit'),
-('如果你看到了一个小伙伴打开了wireshark,那么他可能是要开始做什么羞羞的事了(两个字,常用安全术语)?','抓包');
+INSERT INTO `online_problem_3_blank` (`problem`, `answer`, `id`) VALUES
+('基于网络的、阻止用户访问网络服务的攻击的英文缩写(注意大小写)为:', 'DDoS', 1),
+('一个web开发者如果在linux环境下打算使用PHP,MYSQL,Apache来实现web开发,那么这一套开发环境有一个耳熟能详的缩写名(全大写)为:', 'LAMP', 2),
+('最新发行的ubuntu版本号为:', '14.04', 3),
+('有一套所有程序员都特别喜欢的外文书,每本书封面都有一个不同的动物,请问这套书的主编作者是(注意大小写和符号):', 'O''Reilly', 4),
+('如果想实现通过修改header的参数来伪造IP来源为127.0.0.1的话,应该添加一项什么参数(注意大小写和符号)?', 'X-Forward-For', 5),
+('一提到sqlmap就会想到什么安全方面的问题(请使用全小写的英文,不同单词间空格隔开)?', 'sql injection', 6),
+('XSS原本的英文是指代什么(请使用全小写的英文,不同单词间空格隔开)?', 'cross site script', 7),
+('使用git时想要提交代码到远程repository的话,先git add之后应该 git 加上什么指令(小写,一个单词) 然后再git push?', 'commit', 8),
+('如果你看到了一个小伙伴打开了wireshark,那么他可能是要开始做什么羞羞的事了(两个字,常用安全术语)?', '抓包', 9);
+
 -- --------------------------------------------------------
 
 --
@@ -688,14 +715,14 @@ CREATE TABLE IF NOT EXISTS `online_problem_3_select` (
   `s_c` varchar(150) NOT NULL,
   `s_d` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `online_problem_3_select`
 --
 
-INSERT INTO `online_problem_3_select` (`problem`, `s_a`, `s_b`, `s_c`, `s_d`, `answer`) VALUES
-('现在浏览器地址栏输入: http://localhost/login.php?username=zjicm&password=isa ,回车之后,在后台中可以通过除了______方式获取该URL提交的内容.','POST','SERVER','REQUEST','GET','B');
+INSERT INTO `online_problem_3_select` (`problem`, `answer`, `id`, `s_a`, `s_b`, `s_c`, `s_d`) VALUES
+('现在浏览器地址栏输入: http://localhost/login.php?username=zjicm&password=isa ,回车之后,在后台中可以通过除了______方式获取该URL提交的内容.', 'B', 1, 'POST', 'SERVER', 'REQUEST', 'GET');
 
 -- --------------------------------------------------------
 
@@ -708,21 +735,21 @@ CREATE TABLE IF NOT EXISTS `online_problem_4_blank` (
   `answer` text NOT NULL,
   `id` bigint(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- 转存表中的数据 `online_problem_4_blank`
 --
 
-INSERT INTO `online_problem_4_blank` (`problem`, `answer`) VALUES
-('巴洛克时期的音乐,曲目的调性从_______时期的单一而保守的教会调式发展为采用______形式.','文艺复兴;大小调'),
-('现存的第一部歌剧是_______(4字,不加书名号),是由_____(2字)写剧本,_______(3字)作曲,故事取材于_____   .','优丽狄茜;佩里;卡契尼;希腊神话'),
-('小提琴四根弦的名称从左到右分别是____、____、____、____(大写).小提琴音域为__ (数字)个八度.','G;D;A;E;3'),
-('16世纪,小提琴开始在_____(国家)出现,现存最早的一把小提琴名叫“_____”.','意大利;查理九世'),
-('至今为止最有名的小提琴,是由____(全名,不加分隔符)在____年制作的,名叫“____”.','安东尼奥斯特拉迪瓦里;1716;弥赛亚'),
-('通过琴弓____(3字)后部折角处的圆弧程度的不同可以来区分小提琴与中提琴的琴弓.','马尾槽'),
-('蒙古族特有的单人发出多声部唱法的高超演唱形式称为“____”,一人同时唱出____(数字)个声部.','呼麦;2'),
-('帕瓦罗蒂在《 ____ 》中唱出了 ____(数字)个HIGH C,达到人嗓音的生理极限,因此他被称为“ ____ ”(4字).','多么快乐的一天;9;高音之王');
+INSERT INTO `online_problem_4_blank` (`problem`, `answer`, `id`) VALUES
+('巴洛克时期的音乐,曲目的调性从_______时期的单一而保守的教会调式发展为采用______形式.', '文艺复兴;大小调', 1),
+('现存的第一部歌剧是_______(4字,不加书名号),是由_____(2字)写剧本,_______(3字)作曲,故事取材于_____   .', '优丽狄茜;佩里;卡契尼;希腊神话', 2),
+('小提琴四根弦的名称从左到右分别是____、____、____、____(大写).小提琴音域为__ (数字)个八度.', 'G;D;A;E;3', 3),
+('16世纪,小提琴开始在_____(国家)出现,现存最早的一把小提琴名叫“_____”.', '意大利;查理九世', 4),
+('至今为止最有名的小提琴,是由____(全名,不加分隔符)在____年制作的,名叫“____”.', '安东尼奥斯特拉迪瓦里;1716;弥赛亚', 5),
+('通过琴弓____(3字)后部折角处的圆弧程度的不同可以来区分小提琴与中提琴的琴弓.', '马尾槽', 6),
+('蒙古族特有的单人发出多声部唱法的高超演唱形式称为“____”,一人同时唱出____(数字)个声部.', '呼麦;2', 7),
+('帕瓦罗蒂在《 ____ 》中唱出了 ____(数字)个HIGH C,达到人嗓音的生理极限,因此他被称为“ ____ ”(4字).', '多么快乐的一天;9;高音之王', 8);
 
 -- --------------------------------------------------------
 
@@ -739,15 +766,15 @@ CREATE TABLE IF NOT EXISTS `online_problem_4_select` (
   `s_c` varchar(150) NOT NULL,
   `s_d` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- 转存表中的数据 `online_problem_4_select`
 --
 
-INSERT INTO `online_problem_4_select` (`problem`, `s_a`, `s_b`, `s_c`, `s_d`, `answer`) VALUES
-('巴洛克时期的和声已形成了完整的不包括下面哪种___________为中心的大小调功能和声体系.','主','属','下属','和','D'),
-('“学堂乐歌”是我国音乐史上重要的一个时期,产生于____.','明初 ','明中期','明末清初','清末','C');
+INSERT INTO `online_problem_4_select` (`problem`, `answer`, `id`, `s_a`, `s_b`, `s_c`, `s_d`) VALUES
+('巴洛克时期的和声已形成了完整的不包括下面哪种___________为中心的大小调功能和声体系.', 'D', 1, '主', '属', '下属', '和'),
+('“学堂乐歌”是我国音乐史上重要的一个时期,产生于____.', 'C', 2, '明初 ', '明中期', '明末清初', '清末');
 
 -- --------------------------------------------------------
 
@@ -760,23 +787,24 @@ CREATE TABLE IF NOT EXISTS `online_problem_5_blank` (
   `answer` text NOT NULL,
   `id` bigint(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `online_problem_5_blank`
 --
 
-INSERT INTO `online_problem_5_blank` (`problem`, `answer`) VALUES
-('英雄联盟2013年度最受欢迎解说的成名解说台词是“好吃不过_____”','饺子'),
-('flappy bird的画面像素为___(数字)比特','8'),
-('魔兽世界选手sky于______年获得的第一项大型赛事冠军是中国PGL魔兽天王职业联赛冠军','2007'),
-('浙江大学走出的dota世界冠军伍声于2005年进入浙大_______专业.','生物医学工程'),
-('英雄联盟拥有“邪恶的外表,其实并不是我的内心,你总是说我困住了你,可是,我若是不困住你,你会驻足么?”台词的英雄的Q技能名称是______?','黑暗祭祀'),
-('Dota英雄火女的基础护甲是______(注意精确度)','1.2'),
-('梦幻西游中一把400伤害、600命中的刀真实伤害是_____','600'),
-('游戏2048手游版的开发商是______(注意大小写,无空格及特殊字符)','Ketchapp'),
-('日版魂斗罗调30条命的秘籍是_________(文字字母混合,字母大写)','上上下下左右左右BABA'),
-('之前作为星际2职业选手,后转行LOL的人气女解说是____(全小写)','miss');
+INSERT INTO `online_problem_5_blank` (`problem`, `answer`, `id`) VALUES
+('英雄联盟2013年度最受欢迎解说的成名解说台词是“好吃不过_____”', '饺子', 1),
+('flappy bird的画面像素为___(数字)比特', '8', 2),
+('魔兽世界选手sky于______年获得的第一项大型赛事冠军是中国PGL魔兽天王职业联赛冠军', '2007', 3),
+('浙江大学走出的dota世界冠军伍声于2005年进入浙大_______专业.', '生物医学工程', 4),
+('英雄联盟拥有“邪恶的外表,其实并不是我的内心,你总是说我困住了你,可是,我若是不困住你,你会驻足么?”台词的英雄的Q技能名称是______?', '黑暗祭祀', 5),
+('Dota英雄火女的基础护甲是______(注意精确度)', '1.2', 6),
+('梦幻西游中一把400伤害、600命中的刀真实伤害是_____', '600', 7),
+('游戏2048手游版的开发商是______(注意大小写,无空格及特殊字符)', 'Ketchapp', 8),
+('日版魂斗罗调30条命的秘籍是_________(文字字母混合,字母大写)', '上上下下左右左右BABA', 9),
+('之前作为星际2职业选手,后转行LOL的人气女解说是____(全小写)', 'miss', 10);
+
 -- --------------------------------------------------------
 
 --
@@ -792,4 +820,4 @@ CREATE TABLE IF NOT EXISTS `online_problem_5_select` (
   `s_c` varchar(150) NOT NULL,
   `s_d` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
