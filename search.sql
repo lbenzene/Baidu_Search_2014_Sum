@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
   `username` varchar(50) NOT NULL,
   `password` varchar(60) NOT NULL,
   `first_name` varchar(20) NOT NULL,
-  `score` int(10) NOT NULL DEFAULT '0',
+  `score_offline` int(10) NOT NULL DEFAULT '0',
   `offline` int(11) NOT NULL DEFAULT '0',
   `online` int(11) NOT NULL DEFAULT '0',
   `starttime0` int(100) DEFAULT NULL,
@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
   `endtime7` int(100) DEFAULT NULL,
   `endtime8` int(100) DEFAULT NULL,
   `endtime9` int(100) DEFAULT NULL,
+  `score_online` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -46,9 +47,9 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 -- 转存表中的数据 `auth_user`
 --
 
-INSERT INTO `auth_user` (`id`, `username`, `password`, `first_name`, `score`, `offline`, `online`, `starttime0`, `endtime`, `starttime1`, `starttime2`, `starttime3`, `starttime4`, `starttime5`, `starttime6`, `starttime7`, `starttime8`, `starttime9`, `endtime0`, `endtime1`, `endtime2`, `endtime3`, `endtime4`, `endtime5`, `endtime6`, `endtime7`, `endtime8`, `endtime9`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'single', 16, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, NULL, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL),
-(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'group', 1, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, NULL, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL);
+INSERT INTO `auth_user` (`id`, `username`, `password`, `first_name`, `score_offline`, `offline`, `online`, `starttime0`, `endtime`, `starttime1`, `starttime2`, `starttime3`, `starttime4`, `starttime5`, `starttime6`, `starttime7`, `starttime8`, `starttime9`, `endtime0`, `endtime1`, `endtime2`, `endtime3`, `endtime4`, `endtime5`, `endtime6`, `endtime7`, `endtime8`, `endtime9`, `score_online`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'single', 16, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, 1399954740, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL, 0),
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'group', 1, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, 1399954740, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
