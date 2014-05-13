@@ -17,17 +17,15 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="container main login_form">
+    <div class="row light_grey">
+        <div class="container login_form">
+            <div class="col-md-3"></div>
             <div class="col-md-6">
                 <div class="login">
                 <form class="login_form" action="<?=site_url('offline_question/check_login')?>" 
                     method="post" autocomplete="off">
                     <div class="login_group">
-                        <h3 class="center">线上大赛登录</h3>
-
-                        <p>返回错误信息</p>
-
+                        <h1 class="center">线下大赛登录</h3>
                         <p>
                             <label for="login_username" id="login_username_label" class="login_label login_label_username">帐号</label>
                             <input name="username" id="login_username" type="text" class="form-control" placeholder="帐号">
@@ -46,14 +44,7 @@
                 </div>
             </div>
 
-
-            <div class="col-md-6 login_right">
-                <br />
-                <h1 class="center">还没有帐号？</h1>
-                <h1 class="center">现在就注册！</h1>
-                <br />
-                <br />
-            </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 

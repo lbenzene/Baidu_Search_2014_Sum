@@ -16,18 +16,13 @@
             </div>
         </div>
     </div>
-
-    <div class="row main light_grey">
-        
-        <div class="container">
-            <h3>线下活动</h3>
-
-            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳这里</a></p>        </div>
-        <div class="container">
-
+    
+    <div class="row light_grey">
+        <div class="container center">
+        	<h1>你已经做过本套题组了</h1>
+        	<h3><a href="<?=site_url('offline_question/start')?>">点击这里</a>返回答题界面</h3>
         </div>
     </div>
-
 
 
         <!--  /main  -->
