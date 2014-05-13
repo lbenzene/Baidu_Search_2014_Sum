@@ -19,8 +19,8 @@
     
     <div class="row">
         <div class="container main login_form">
-            <div class="col-md-6">
-                <div class="login">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 login">
                 <form class="login_form" action="<?=site_url('offline_question/check_login')?>" 
                     method="post" autocomplete="off">
                     <div class="login_group">
@@ -43,17 +43,9 @@
                         </p>
                     </div>
                 </form>
-                </div>
             </div>
 
-
-            <div class="col-md-6 login_right">
-                <br />
-                <h1 class="center">还没有帐号？</h1>
-                <h1 class="center">现在就注册！</h1>
-                <br />
-                <br />
-            </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 

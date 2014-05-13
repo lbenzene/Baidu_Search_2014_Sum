@@ -114,16 +114,16 @@ div.bottom_info > div.logo{
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href=""><?=$username_online?><span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="<?=site_url('online_question/slect')?>">开始答题</a></li>
+                    <li><a href="<?=site_url('online_question/start')?>">开始答题</a></li>
                     <li><a href="<?=site_url('online_question/scores')?>">查看成绩</a></li>
                     <li class="divider"></li>
                     <li id="exit"><a href="<?=site_url('online_question/exit_login')?>">退出</a></li>
                 </ul>
             </li>
             <?php } else { ?>
-                <li title="登录">
-                    <a href="<?=site_url('online_question/login')?>">登录</a>
-                </li>            
+            <li title="登录">
+                <a href="<?=site_url('online_question/login')?>">登录</a>
+            </li>            
             <?php } ?>
         </ul>
     </nav>

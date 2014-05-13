@@ -6,7 +6,7 @@
             <br/>
             <div class="container" >
                 <h1>百度校园推广搜索大赛</h1>
-                <h3>—线下答题网站—</h3>
+                <h3>—线上答题网站—</h3>
                 <h3>在这里你可以尽情展现你自己的答案</h3>
                 <br />
                 <p class="center">
@@ -28,7 +28,6 @@
     <br />
     <script type="text/javascript">
 
-        // window.location.assign('<?=site_url()?>');
         var t1 = setTimeout("document.getElementById('timing').innerHTML='4';",1000);
         var t2 = setTimeout("document.getElementById('timing').innerHTML='3';",2000);
         var t3 = setTimeout("document.getElementById('timing').innerHTML='2';",3000);

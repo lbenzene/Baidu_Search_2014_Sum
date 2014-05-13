@@ -62,8 +62,12 @@
 
 		public function exit_login()
 		{
-			$this->session->unset_userdata('username_offline');
-			$this->load_view('exit_success');
+			if ($this->session->userdata('username_offline')!=NULL) {
+				$this->session->unset_userdata('username_offline');
+				$this->load_view('exit_success');
+			}	else {
+				redirect('offline_question/login');
+			}
 		}
 
 		//答题部分
@@ -83,10 +87,15 @@
 				show_404();
 			}	else {		
 				if ($this->session->userdata('username_offline')!=NULL) {
-					$data['select'] = $this->question_model->get_offline_select_question_by_mark($mark);
-					$data['blank']	= $this->question_model->get_offline_blank_question_by_mark($mark);
-					$data['mark'] = $mark;
-					$this->load_view('questionare',$data);
+					$check_data = $this->user_model->check_offline_answer_time($this->session->userdata('username_offline'),$mark);
+					if ($check_data) 
+						$this->load_view('already');
+					else {
+						$data['select'] = $this->question_model->get_offline_select_question_by_mark($mark);
+						$data['blank']	= $this->question_model->get_offline_blank_question_by_mark($mark);
+						$data['mark'] = $mark;
+						$this->load_view('questionare',$data);	
+					}
 				}	else {
 					redirect('offline_question/login');
 				}
@@ -98,17 +107,30 @@
 			if ($this->session->userdata('username_offline')!=NULL) {
 				$data['total_score'] = 0;
 
+				//$answer_data[0]['answer'] = $this->input->get('s_answer_1',TRUE);
 				for($i=0; $i<10; $i++)
-					$check_data[$i]['answer'] = $this->input->post('s_answer_'.$i,TRUE);
-				$data['total_score'] += $this->question_model->check_offline_select_answer($mark,$check_data);
-				
+					//$answer_data[$i]['answer'] = $this->input->get('s_answer_'.$i+1,TRUE);
+					$answer_data[$i]['answer'] = $this->input->get('s_answer_'.$i+1,TRUE);
+		
+				$data['total_score'] += $this->question_model->check_offline_select_answer($mark,$answer_data);
+
 				for($i=0; $i<10; $i++)
-					$check_data[$i]['answer'] = $this->input->post('b_answer_'.$i,TRUE);
-				$data['total_score'] += $this->question_model->check_offline_blank_answer($mark,$check_data);
+					$answer_data[$i]['answer'] = $this->input->get('b_answer_'.$i+1,TRUE);
+				$data['total_score'] += $this->question_model->check_offline_blank_answer($mark,$answer_data);
 				
 				if ($data['total_score'] == 10) 
 					$data['total_score'] += 2;
-				$this->load_view('result',$data);
+
+				$check_data = $this->user_model->check_offline_answer_time($this->session->userdata('username_offline'),$mark);
+				if ($check_data) 
+					$this->load_view('already');
+				else {
+					//$this->user_model->finished_offline_question($this->session->userdata('username_offline'),$mark);
+					$this->user_model->add_score_offline($this->session->userdata('username_offline'),$data['total_score']);
+
+					//var_dump($answer_data);
+					$this->load_view('result',$data);
+				}
 			}	else {
 				redirect('offline_question/login');
 			}

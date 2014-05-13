@@ -18,10 +18,6 @@
     </div>
 
     <div class="row main">
-        <div class="container">
-                <h1>百度校园推广搜索大赛</h1>
-                <h3>本次百度校园推广搜索大赛分为<a href="#noline">线上活动</a>和<a href="#offline">线下活动</a>两方面。</h3>
-        </div>
         <div class="container" id="online">
             <h3>线上活动</h3>
 
