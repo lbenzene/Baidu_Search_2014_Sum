@@ -20,7 +20,7 @@
     <div class="row">
         <div class="container center">
             <h1>欢迎您，<?=$username?></h1>
-            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('online_question/select')?>">答题界面</a></h3>
+            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('online_question/start')?>">答题界面</a></h3>
             <h3>或者点击<a href="<?=site_url('online_question/index')?>">这里</a>返回首页</h3>
         </div>
 
