@@ -20,8 +20,8 @@
     <div class="row">
         <div class="container center">
             <h1>提交成功</h1>
-            <h1>本套题组得分：<? $total_score?></h1>
-            <h3>点击<a href="<?=site_url('offline_question/select')?>">这里</a>返回答题界面</h3>
+            <h1>本套题组得分：<?php echo $total_score; ?></h1>
+            <h3>点击<a href="<?=site_url('offline_question/start')?>">这里</a>返回答题界面</h3>
             <h3>或者点击<a href="<?=site_url('offline_question/index')?>">这里</a>返回首页面</h3>
         </div>
 
