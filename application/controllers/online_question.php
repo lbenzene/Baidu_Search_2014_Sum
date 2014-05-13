@@ -62,8 +62,12 @@
 
 		public function exit_login()
 		{
-			$this->session->unset_userdata('username_online');
-			$this->load_view('exit_success');
+			if ($this->session->userdata('username_online')!=NULL) {
+				$this->session->unset_userdata('username_online');
+				$this->load_view('exit_success');
+			}	else {
+				redirect('online_question/login');
+			}
 		}
 
 		//答题部分
@@ -83,10 +87,15 @@
 				show_404();
 			}	else {		
 				if ($this->session->userdata('username_online')!=NULL) {
-					$data['select'] = $this->question_model->get_online_select_question_by_mark($mark);
-					$data['blank']	= $this->question_model->get_online_blank_question_by_mark($mark);
-					$data['mark'] = $mark;
-					$this->load_view('questionare',$data);
+					$check_data = $this->user_model->check_online_answer_time($this->session->userdata('username_online'),$mark);
+					if ($check_data) 
+						$this->load_view('already');
+					else {
+						$data['select'] = $this->question_model->get_online_select_question_by_mark($mark);
+						$data['blank']	= $this->question_model->get_online_blank_question_by_mark($mark);
+						$data['mark'] = $mark;
+						$this->load_view('questionare',$data);
+					}
 				}	else {
 					redirect('online_question/login');
 				}
@@ -99,16 +108,25 @@
 				$data['total_score'] = 0;
 
 				for($i=0; $i<10; $i++)
-					$check_data[$i]['answer'] = $this->input->post('s_answer_'.$i,TRUE);
-				$data['total_score'] += $this->question_model->check_online_select_answer($mark,$check_data);
+					$answer_data[$i]['answer'] = $this->input->get('s_answer_'.$i+1,TRUE);
+				$data['total_score'] += $this->question_model->check_online_select_answer($mark,$answer_data);
 				
 				for($i=0; $i<10; $i++)
-					$check_data[$i]['answer'] = $this->input->post('b_answer_'.$i,TRUE);
-				$data['total_score'] += $this->question_model->check_online_blank_answer($mark,$check_data);
+					$answer_data[$i]['answer'] = $this->input->get('b_answer_'.$i+1,TRUE);
+				$data['total_score'] += $this->question_model->check_online_blank_answer($mark,$answer_data);
 				
 				if ($data['total_score'] == 10) 
 					$data['total_score'] += 2;
-				$this->load_view('result',$data);
+
+				$check_data = $this->user_model->check_online_answer_time($this->session->userdata('username_online'),$mark);
+				if ($check_data) 
+					$this->load_view('already');
+				else {
+					//$this->user_model->finished_online_question($this->session->userdata('username_online'),$mark);
+					$this->user_model->add_score_online($this->session->userdata('username_online'),$data['total_score']);
+
+					$this->load_view('result',$data);
+				}
 			}	else {
 				redirect('online_question/login');
 			}
