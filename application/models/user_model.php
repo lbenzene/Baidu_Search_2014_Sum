@@ -100,14 +100,14 @@ class User_model extends CI_Model
 
     function add_score_online($username, $score)
     {
-        $this->db->select('score');
+        $this->db->select('score_online');
         $this->db->where('username',$username);
         $this->db->where('first_name','single');
         $query = $this->db->get('auth_user');
         $data = $query->row_array(0);
         
         $update_data = array(
-                'score' => $data['score'] + $score
+                'score_online' => $data['score_online'] + $score
             );
 
         $this->db->where('username',$username);
@@ -117,14 +117,14 @@ class User_model extends CI_Model
 
     function add_score_offline($username, $score)
     {
-        $this->db->select('score');
+        $this->db->select('score_offline');
         $this->db->where('username',$username);
         $this->db->where('first_name','group');
         $query = $this->db->get('auth_user');
         $data = $query->row_array(0);
         
         $update_data = array(
-                'score' => $data['score'] + $score
+                'score_offline' => $data['score_offline'] + $score
             );
 
         $this->db->where('username',$username);
@@ -163,4 +163,16 @@ class User_model extends CI_Model
         $this->db->where('username',$username);
         $this->db->update('auth_user',$update_data);
     }
+
+    public function get_online_rank() {
+        $this->db->select('id,username,score_online,score_sum');
+        $this->db->where('first_name','single');
+        $this->db->order_by('score_online','desc');
+    }    
+
+    public function get_offline_rank() {
+        $this->db->select('id,username,score_offline,score_sum');
+        $this->db->where('first_name','group');
+        $this->db->order_by('score_offline','desc');
+    }    
 }
