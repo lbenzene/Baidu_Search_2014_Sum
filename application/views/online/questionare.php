@@ -93,6 +93,7 @@
 
     <script type="text/javascript">
         var t
+        var time = <?=time?>
         var minutes = 0;
         var seconds = 0;
         function checkTime(i)
