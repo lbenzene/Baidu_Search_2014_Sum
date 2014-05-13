@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="row main">
+    <div class="row main light_grey">
         <div class="container">
             <h1>???</h1>
         </div>
@@ -27,7 +27,7 @@
         
         <div class="container" id="online">
             <h3>线上活动</h3>
-            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳</a>   </p>
+            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳这里</a></p>
         </div>
         <div class="container">
 
