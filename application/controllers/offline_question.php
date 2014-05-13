@@ -87,13 +87,17 @@
 				show_404();
 			}	else {		
 				if ($this->session->userdata('username_offline')!=NULL) {
-					$check_data = $this->user_model->check_offline_answer_time($this->session->userdata('username_offline'),$mark);
+					$username = $this->session->userdata('username_offline');
+					$check_data = $this->user_model->check_offline_answer_time($username,$mark);
 					if ($check_data) 
 						$this->load_view('already');
 					else {
 						$data['select'] = $this->question_model->get_offline_select_question_by_mark($mark);
 						$data['blank']	= $this->question_model->get_offline_blank_question_by_mark($mark);
+						if ($this->user_model->check_start_time($username,$mark) == 0)
+							$this->user_model->add_start_time($username,$mark);
 						$data['mark'] = $mark;
+						$data['time'] = $this->user_model->check_start_time($username,$mark);
 						$this->load_view('questionare',$data);	
 					}
 				}	else {
@@ -105,30 +109,28 @@
 		public function check_answer($mark)
 		{
 			if ($this->session->userdata('username_offline')!=NULL) {
+				$username = $this->session->userdata('username_offline');
 				$data['total_score'] = 0;
 
-				//$answer_data[0]['answer'] = $this->input->get('s_answer_1',TRUE);
 				for($i=0; $i<10; $i++)
-					//$answer_data[$i]['answer'] = $this->input->get('s_answer_'.$i+1,TRUE);
-					$answer_data[$i]['answer'] = $this->input->get('s_answer_'.$i+1,TRUE);
-		
+					$answer_data[$i]['answer'] = $this->input->post('s_answer_'.($i+1),TRUE);
 				$data['total_score'] += $this->question_model->check_offline_select_answer($mark,$answer_data);
 
 				for($i=0; $i<10; $i++)
-					$answer_data[$i]['answer'] = $this->input->get('b_answer_'.$i+1,TRUE);
+					$answer_data[$i]['answer'] = $this->input->post('b_answer_'.($i+1),TRUE);
 				$data['total_score'] += $this->question_model->check_offline_blank_answer($mark,$answer_data);
 				
 				if ($data['total_score'] == 10) 
 					$data['total_score'] += 2;
 
-				$check_data = $this->user_model->check_offline_answer_time($this->session->userdata('username_offline'),$mark);
+				$check_data = $this->user_model->check_offline_answer_time($username,$mark);
 				if ($check_data) 
 					$this->load_view('already');
 				else {
 					//$this->user_model->finished_offline_question($this->session->userdata('username_offline'),$mark);
-					$this->user_model->add_score_offline($this->session->userdata('username_offline'),$data['total_score']);
-
-					//var_dump($answer_data);
+					$this->user_model->add_score_offline($username,$data['total_score']);
+					if ($this->user_model->check_end_time($username,$mark) == NULL)
+							$this->user_model->add_end_time($username,$mark);
 					$this->load_view('result',$data);
 				}
 			}	else {

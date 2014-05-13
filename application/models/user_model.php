@@ -131,4 +131,36 @@ class User_model extends CI_Model
         $this->db->where('first_name','group');
         $query = $this->db->update('auth_user',$update_data);        
     }
+
+    public function check_start_time($username,$mark) {
+        $this->db->select('starttime'.$mark);
+        $this->db->where('username',$username);
+        $query = $this->db->get('auth_user');
+        $data = $query->row_array(0);
+        return $data['starttime'.$mark];
+    }
+
+    public function check_end_time($username,$mark) {
+        $this->db->select('endtime'.$mark);
+        $this->db->where('username',$username);
+        $query = $this->db->get('auth_user');
+        $data = $query->row_array(0);
+        return $data['endtime'.$mark];
+    }
+
+    public function add_start_time($username,$mark) {
+        $update_data = array(
+                'starttime'.$mark  => strtotime(date('h:i:s'))
+            );
+        $this->db->where('username',$username);
+        $this->db->update('auth_user',$update_data);
+    }
+    
+    public function add_end_time($username,$mark) {
+        $update_data = array(
+                'endtime'.$mark  => strtotime(date('h:i:s'))
+            );
+        $this->db->where('username',$username);
+        $this->db->update('auth_user',$update_data);
+    }
 }
