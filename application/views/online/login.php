@@ -30,8 +30,8 @@
                         <p>返回错误信息</p>
 
                         <p>
-                            <label for="login_username" id="login_username_label" class="login_label login_label_username">帐号</label>
-                            <input name="username" id="login_username" type="text" class="form-control" placeholder="帐号">
+                            <label for="login_username" id="login_username_label" class="login_label login_label_username">学号</label>
+                            <input name="username" id="login_username" type="text" class="form-control" placeholder="学号">
                         </p>
                         <br />
                         <p>
