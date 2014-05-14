@@ -25,27 +25,23 @@
                 <h3 class="problem">单选题:</h3>
                 <?php foreach ($select as $keys => $question): ?>
                 <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
-                <div class="row">
-                    <div class="col-md-3 single_choice_answer">
+                <div class="row" data-toggle="buttons">
+                    <label class="btn single_answer">
                         <input id="qst<?=$question['id']?>_answerA" type="radio" 
-                            name="s_answer_<?=$question['id']?>" value="A" />
-                        <label for="qst<?=$question['id']?>_answerA"><?=$question['s_a']?></label>
-                    </div>
-                    <div class="col-md-3 single_choice_answer">
+                            name="s_answer_<?=$question['id']?>" value="A" />A.&nbsp;<?=$question['s_a']?>
+                    </label>
+                    <label class="btn single_answer">
                         <input id="qst<?=$question['id']?>_answerB" type="radio" 
-                            name="s_answer_<?=$question['id']?>" value="B" />
-                        <label for="qst<?=$question['id']?>_answerB"><?=$question['s_b']?></label>
-                    </div>
-                    <div class="col-md-3 single_choice_answer">
+                            name="s_answer_<?=$question['id']?>" value="B" />B.&nbsp;<?=$question['s_b']?>
+                    </label>
+                    <label class="btn single_answer">
                         <input id="qst<?=$question['id']?>_answerC" type="radio" 
-                            name="s_answer_<?=$question['id']?>" value="C" />
-                        <label for="qst<?=$question['id']?>_answerC"><?=$question['s_c']?></label>
-                    </div>
-                    <div class="col-md-3 single_choice_answer">
+                            name="s_answer_<?=$question['id']?>" value="C" />C.&nbsp;<?=$question['s_c']?>
+                    </label>
+                    <label class="btn single_answer">
                         <input id="qst<?=$question['id']?>_answerD" type="radio" 
-                            name="s_answer_<?=$question['id']?>" value="D" />
-                        <label for="qst<?=$question['id']?>_answerD"><?=$question['s_d']?></label>
-                    </div>
+                            name="s_answer_<?=$question['id']?>" value="D" />D.&nbsp;<?=$question['s_d']?>
+                    </label>
                 </div>
                 <br />
                 <?php endforeach; ?>
@@ -65,7 +61,6 @@
                 <p>恭喜你已经回答玩了</p>
                 <input type="submit" value="提交答案" class="btn btn-success" />
             </form>
-            
             <br />
         </div>
 
@@ -78,15 +73,17 @@
         <div class="bottom_brand">Baidu Club</div>
 
 
-        <div class="timing" >本套题组所用时间 <b id="time">00：00</b></div>
+        <div class="timing" >本套题组所用时间 <b id="time">0：00：00</b></div>
     </div>
 
     <script type="text/javascript">
 
-        var t;
-        var time = <?=$time?>;
-        var minutes = 0;
-        var seconds = 0;
+        var start_time = <?php echo $time;?>;
+        var local_time = <?php echo time();?>;
+        var time = local_time - start_time;
+        var hours = parseInt(time / 3600);
+        var minutes = parseInt((time - hours*3600) / 60);
+        var seconds = time - hours*3600 - minutes*60;
         function checkTime(i)
         {
             if (i<10) 
@@ -95,7 +92,7 @@
         }
         function timedCount()
         {
-            document.getElementById('time').innerHTML = checkTime(minutes)+"："+checkTime(seconds);
+            document.getElementById('time').innerHTML = hours+"："+checkTime(minutes)+"："+checkTime(seconds);
             seconds++;
             if ( seconds>=60 ) 
             {
