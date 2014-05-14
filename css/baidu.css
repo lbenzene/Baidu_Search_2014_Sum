@@ -166,12 +166,21 @@ div.container{
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 }
 
+p.problem{
+  font-family: inherit;
+  font-size: 15px;
+  color: #111;
+  font-weight: bold;
+}
+
 label.single_answer{
   display: block;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  border-width:  0;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border-width:  1px;
+  border-style: solid;
+  border-color: #f0f0f0;
   background-color: transparent;
   margin:  2px auto;
 
@@ -182,16 +191,20 @@ label.single_answer{
   position: relative;
   padding-right: 15px;
   padding-left: 15px;
+
+  font-size: 14px;
+  font-family: inherit;
 }
 
 label.single_answer.active,
 label.single_answer:active{
-  background-color: #000;
-  color: #fff;
+  background-color: #888;
+  color: #eee;
 }
 label.single_answer:hover{
-  background-color: #888;
-  color: #fff;
+
+  border-style: solid;
+  border-color: #888;
 }
 
 @media (min-width: 768px) {

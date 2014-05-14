@@ -34,7 +34,13 @@
                         <td style="width:10%"><?=$key+1?></td>
                         <td><?=$user_scores['username']?></td>
                         <td><?=$user_scores['score_online']?></td>
-                        <td><?=$user_scores['time_sum']?></td>          
+                        <td><?php
+                            $time = $user_scores['time_sum'];
+                            $hours = (int)($time / 3600);
+                            $minutes = (int)(($time - $hours*3600) / 60);
+                            $seconds = $time - $hours*3600 - $minutes*60;
+                            echo "$hours:$minutes:$seconds"?>
+                        </td>          
                     </tr>
                     <?php endforeach;?>
                 </tbody>
