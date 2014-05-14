@@ -479,6 +479,11 @@ div.select > div{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; 
   }
+
+  div.select > div > label{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 @media (min-width: 992px) {
