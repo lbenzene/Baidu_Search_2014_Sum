@@ -145,7 +145,6 @@ div.row > div > ol > li > p,
 div.row > div > ul > li > p{
   margin: 10px 0 0 0;
   line-height: 150%; 
-  color: #000;
   font-size: 14px;
 }
 
@@ -167,7 +166,7 @@ div.container{
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
 }
 
-div.single_choice_answer{
+label.single_answer{
   display: block;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
@@ -175,7 +174,41 @@ div.single_choice_answer{
   border-width:  0;
   background-color: transparent;
   margin:  2px auto;
+
+  -webkit-transition: 0.2s ease-in-out; /* Safari and Chrome */
+     -moz-transition: 0.2s ease-in-out; /* Firefox 4 */
+       -o-transition: 0.2s ease-in-out; /* Opera */
+          transition: 0.2s ease-in-out;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
 }
+
+label.single_answer.active,
+label.single_answer:active{
+  background-color: #000;
+  color: #fff;
+}
+label.single_answer:hover{
+  background-color: #888;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  label.single_answer{
+    width: 25%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  label.single_answer{
+    width: 25%;
+    float: left;
+  }
+}
+
+
 
 
 .left{
@@ -329,6 +362,33 @@ form.header_search > input:focus{
   }
 }
 
+/*  select style
+ *  and questionare style
+ */
+
+div#important{
+  margin: 20px;
+  border-style: solid;
+  border-color: #888;
+  border-radius: 12px;
+  border-width: 4px;
+  padding: 10px 30px;
+  z-index: 50;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.3);
+  background-color: #fff;
+}
+
+div#important > h1.important,
+div#important > h3.important,
+div#important > p.important{
+  color: #FF0000;
+}
+div#important > h3.important{
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 
 /*
@@ -395,3 +455,46 @@ div.bottom_info > div.timing{
   font-weight: normal;
   color: #444;
 }
+
+
+
+div.select > div{
+  clear: both;
+  margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+  div.select > div > label{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  div.select > div > input{
+    width: 440px;
+    position: relative;
+    float: left;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; 
+  }
+
+  div.select > div > label{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  div.select > div > input{
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.select > div > input{
+    width: 400px;
+  }
+}
+

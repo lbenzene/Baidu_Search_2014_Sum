@@ -854,3 +854,4 @@ function timedCount()
 }
 */
 
+// $('.single_choice_answer').button();

@@ -25,11 +25,7 @@ $(document).ready(function(){
         increaseArea: '20%' // optional
     });
 
-
-    $(".pinned").pin({
-        containerSelector: ".container", minWidth: 940
-    });
-<!--[if lt IE 10]> 
+<!--[if IE 10]> 
     alert("你所使用的浏览器可能无法支持该网站的部分组件\n请使用Internet Explorer 10、Firefox、Opera、Chrome 或者Safari来访问");
 <![endif]-->
 });
