@@ -41,7 +41,8 @@
 
 		public function scores()
 		{
-			$this->load_view('scores');
+			$data['rank'] = $this->user_model->get_online_rank();
+			$this->load_view('scores',$data);
 		}
 
 		public function login()

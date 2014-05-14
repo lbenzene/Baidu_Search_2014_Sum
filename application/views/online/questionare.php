@@ -20,7 +20,7 @@
     <div class="row light_grey">
         <div class="container main">
             <br />
-            <form action="<?=site_url('online_question/check_answer/'.$mark)?>" method="get">
+            <form action="<?=site_url('online_question/check_answer/'.$mark)?>" method="post">
                 <!-- 单选 -->
                 <h3 class="problem">单选题:</h3>
                 <?php foreach ($select as $keys => $question): ?>

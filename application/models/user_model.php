@@ -162,17 +162,35 @@ class User_model extends CI_Model
             );
         $this->db->where('username',$username);
         $this->db->update('auth_user',$update_data);
+        ////////
+        $this->db->select('time_sum,endtime'.$mark.',starttime'.$mark);
+        $this->db->where('username',$username);
+        $query = $this->db->get('auth_user');
+        $data = $query->row_array(0);
+        $update_data = array(
+                'time_sum' => $data['time_sum'] + $data['endtime'.$mark] - $data['starttime'.$mark]
+            );
+        $this->db->where('username',$username);
+        $query = $this->db->update('auth_user',$update_data);        
     }
 
     public function get_online_rank() {
-        $this->db->select('id,username,score_online,score_sum');
+        $this->db->select('id,username,score_online,time_sum');
         $this->db->where('first_name','single');
         $this->db->order_by('score_online','desc');
+        $this->db->order_by('time_sum','asc'); 
+        $query = $this->db->get('auth_user');
+        $data = $query->result_array();
+        return $data;
     }    
 
     public function get_offline_rank() {
-        $this->db->select('id,username,score_offline,score_sum');
+        $this->db->select('id,username,score_offline,time_sum');
         $this->db->where('first_name','group');
         $this->db->order_by('score_offline','desc');
+        $this->db->order_by('time_sum','asc'); 
+        $query = $this->db->get('auth_user');
+        $data = $query->result_array();
+        return $data;
     }    
 }
