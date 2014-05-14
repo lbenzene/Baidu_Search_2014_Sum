@@ -18,28 +18,28 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
   `score_offline` int(10) NOT NULL DEFAULT '0',
   `offline` int(11) NOT NULL DEFAULT '0',
   `online` int(11) NOT NULL DEFAULT '0',
-  `starttime0` int(100) DEFAULT NULL,
-  `endtime` int(100) DEFAULT NULL,
-  `starttime1` int(100) DEFAULT NULL,
-  `starttime2` int(100) DEFAULT NULL,
-  `starttime3` int(100) DEFAULT NULL,
-  `starttime4` int(100) DEFAULT NULL,
-  `starttime5` int(100) DEFAULT NULL,
-  `starttime6` int(100) DEFAULT NULL,
-  `starttime7` int(100) DEFAULT NULL,
-  `starttime8` int(100) DEFAULT NULL,
-  `starttime9` int(100) DEFAULT NULL,
-  `endtime0` int(100) DEFAULT NULL,
-  `endtime1` int(100) DEFAULT NULL,
-  `endtime2` int(100) DEFAULT NULL,
-  `endtime3` int(100) DEFAULT NULL,
-  `endtime4` int(100) DEFAULT NULL,
-  `endtime5` int(100) DEFAULT NULL,
-  `endtime6` int(100) DEFAULT NULL,
-  `endtime7` int(100) DEFAULT NULL,
-  `endtime8` int(100) DEFAULT NULL,
-  `endtime9` int(100) DEFAULT NULL,
+  `starttime0` int(100) DEFAULT '0',
+  `starttime1` int(100) DEFAULT '0',
+  `starttime2` int(100) DEFAULT '0',
+  `starttime3` int(100) DEFAULT '0',
+  `starttime4` int(100) DEFAULT '0',
+  `starttime5` int(100) DEFAULT '0',
+  `starttime6` int(100) DEFAULT '0',
+  `starttime7` int(100) DEFAULT '0',
+  `starttime8` int(100) DEFAULT '0',
+  `starttime9` int(100) DEFAULT '0',
+  `endtime0` int(100) DEFAULT '0',
+  `endtime1` int(100) DEFAULT '0',
+  `endtime2` int(100) DEFAULT '0',
+  `endtime3` int(100) DEFAULT '0',
+  `endtime4` int(100) DEFAULT '0',
+  `endtime5` int(100) DEFAULT '0',
+  `endtime6` int(100) DEFAULT '0',
+  `endtime7` int(100) DEFAULT '0',
+  `endtime8` int(100) DEFAULT '0',
+  `endtime9` int(100) DEFAULT '0',
   `score_online` int(10) NOT NULL DEFAULT '0',
+  `time_sum` int(100) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -47,9 +47,9 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 -- 转存表中的数据 `auth_user`
 --
 
-INSERT INTO `auth_user` (`id`, `username`, `password`, `first_name`, `score_offline`, `offline`, `online`, `starttime0`, `endtime`, `starttime1`, `starttime2`, `starttime3`, `starttime4`, `starttime5`, `starttime6`, `starttime7`, `starttime8`, `starttime9`, `endtime0`, `endtime1`, `endtime2`, `endtime3`, `endtime4`, `endtime5`, `endtime6`, `endtime7`, `endtime8`, `endtime9`, `score_online`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'single', 16, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, 1399954740, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL, 0),
-(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'group', 1, 0, 0, 1399946063, 0, 1399946684, 1399946335, 1399946689, 1399946422, 1399946519, NULL, NULL, NULL, NULL, 1399946191, NULL, 1399954740, 1399946693, 1399946451, 1399946531, NULL, NULL, NULL, NULL, 0);
+INSERT INTO `auth_user` (`id`, `username`, `password`, `first_name`, `score_offline`, `offline`, `online`, `starttime0`, `starttime1`, `starttime2`, `starttime3`, `starttime4`, `starttime5`, `starttime6`, `starttime7`, `starttime8`, `starttime9`, `endtime0`, `endtime1`, `endtime2`, `endtime3`, `endtime4`, `endtime5`, `endtime6`, `endtime7`, `endtime8`, `endtime9`, `score_online`, `time_sum`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'single', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'group', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
