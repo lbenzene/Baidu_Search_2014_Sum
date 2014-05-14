@@ -455,3 +455,41 @@ div.bottom_info > div.timing{
   font-weight: normal;
   color: #444;
 }
+
+
+
+div.select > div{
+  clear: both;
+  margin: 20px 0;
+}
+
+@media (max-width: 767px) {
+  div.select > div > label{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  div.select > div > input{
+    width: 440px;
+    position: relative;
+    float: left;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; 
+  }
+}
+
+@media (min-width: 992px) {
+  div.select > div > input{
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.select > div > input{
+    width: 400px;
+  }
+}
+
