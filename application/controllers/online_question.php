@@ -6,6 +6,7 @@
 	{
 		public function __construct(){
 			parent::__construct();
+	        date_default_timezone_set('UTC');
 			$this->load->helper('url');
 			$this->load->model(array('user_model','question_model'));
 		}
