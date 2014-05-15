@@ -128,9 +128,9 @@
 				if ($check_data) 
 					$this->load_view('already');
 				else {
-					//$this->user_model->finished_offline_question($this->session->userdata('username_offline'),$mark);
+					$this->user_model->finished_offline_question($this->session->userdata('username_offline'),$mark);
 					$this->user_model->add_score_offline($username,$data['total_score']);
-					if ($this->user_model->check_end_time($username,$mark) == NULL)
+					if ($this->user_model->check_end_time($username,$mark) == 0)
 							$this->user_model->add_end_time($username,$mark);
 					$this->load_view('result',$data);
 				}
