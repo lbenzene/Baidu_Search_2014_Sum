@@ -158,9 +158,7 @@ div.row > div > p.info{
   padding: 5px 20px;
 
   color: #555;
-
 }
-
 
 div.container{
   font-family: 'Segoe UI', Arial, 'Microsoft Yahei', Simsun, sans-serif;
@@ -511,3 +509,15 @@ div.select > div{
   }
 }
 
+.btn_enlarge{
+  width: 90px;
+}
+
+.btn_enlarge:focus,
+.btn_enlarge:hover{
+  width: 80%;
+  -webkit-transition:width 0.9s ease-in-out; /* Safari and Chrome */
+     -moz-transition:width 0.9s ease-in-out; /* Firefox 4 */
+       -o-transition:width 0.9s ease-in-out; /* Opera */
+          transition:width 0.9s ease-in-out;
+}

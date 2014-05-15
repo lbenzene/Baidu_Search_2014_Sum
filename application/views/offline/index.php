@@ -20,14 +20,13 @@
     <div class="row main light_grey">
         
         <div class="container">
-            <h3>线下活动</h3>
+            <h1>这里是线下活动的答题网站</h1>
+            <h3 class="center"><a href="<?=site_url('offline_question/start')?>" class="btn btn-primary btn_enlarge">开始答题</a></h3>
 
-            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳这里</a></p>        </div>
-        <div class="container">
+            <p class="center">还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳这里</a></p>
 
         </div>
     </div>
-
 
 
         <!--  /main  -->

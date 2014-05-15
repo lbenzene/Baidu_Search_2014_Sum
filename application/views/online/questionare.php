@@ -9,9 +9,6 @@
                 <h3>—线上答题网站—</h3>
                 <h3>在这里你可以尽情展现你自己的答案</h3>
                 <br />
-                <p class="center">
-                    <a href="<?=site_url('online_question/index')?>" class="btn white_btn">线上大赛首页</a>
-                </p>
 
             </div>
         </div>
@@ -22,7 +19,7 @@
             <br />
             <form action="<?=site_url('online_question/check_answer/'.$mark)?>" method="post">
                 <!-- 单选 -->
-                <h3 class="problem">单选题:</h3>
+                <?php if (isset($select[0])) echo '<h3 class="problem">单选题:</h3>'; ?>
                 <?php foreach ($select as $keys => $question): ?>
                 <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
                 <div class="row" data-toggle="buttons">
@@ -48,7 +45,7 @@
 
                 <br />
                 <!-- 填空 -->
-                <h3 class="problem left">填空题:</h3>
+                <?php if (isset($blank[0])) echo '<h3 class="problem">填空题:<b>(如果有多个空，请用英文分号“;”隔开，不要留空格)</b></h3>'; ?>
                 <?php foreach ($blank as $keys => $question): ?>
                 <div>
                 <p class="problem left"><?=$question['id']?>.<?=$question['problem']?></p>
