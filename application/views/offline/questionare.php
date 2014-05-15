@@ -80,7 +80,7 @@
     <script type="text/javascript">
 
         var start_time = <?php echo $time;?>;
-        var local_time = <?php echo time();?>;
+        var local_time = <?php echo strtotime(date('h:i:s'));?>;
         var time = local_time - start_time;
         var hours = parseInt(time / 3600);
         var minutes = parseInt((time - hours*3600) / 60);
