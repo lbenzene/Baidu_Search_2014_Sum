@@ -49,10 +49,10 @@ body {
 
 a {
   background: transparent;
-  -webkit-transition: 0.25s linear; /* Safari and Chrome */
-     -moz-transition: 0.25s linear; /* Firefox 4 */
-       -o-transition: 0.25s linear; /* Opera */
-          transition: 0.25s linear;
+  -webkit-transition:all 0.25s linear; /* Safari and Chrome */
+     -moz-transition:all 0.25s linear; /* Firefox 4 */
+       -o-transition:all 0.25s linear; /* Opera */
+          transition:all 0.25s linear;
 }
 
 a:focus {

@@ -21,8 +21,8 @@
         <div class="container center">
             <h1>提交成功</h1>
             <h1>本套题组得分：<?php echo $total_score; ?></h1>
-            <h3>点击<a href="<?=site_url('online_question/start')?>">这里</a>返回答题界面</h3>
-            <h3>或者点击<a href="<?=site_url('online_question/index')?>">这里</a>返回首页面</h3>
+            <h3>点击<a href="<?=site_url('online_question/start')?>">这里返回答题界面</a></h3>
+            <h3>或者点击<a href="<?=site_url('online_question/index')?>">这里返回首页面</a></h3>
         </div>
 
     </div>

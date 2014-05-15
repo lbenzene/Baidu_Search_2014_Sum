@@ -19,17 +19,10 @@
 
     <div class="row main light_grey">
         <div class="container">
-            <h1>???</h1>
-        </div>
-        <div class="container" id="online">
-            <h3><a href="<?=site_url('online_question/login')?>" class="btn btn-primary">登录</a></h3>
-        </div>
-        
-        <div class="container" id="online">
-            <h3>线上活动</h3>
-            <p>还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳这里</a></p>
-        </div>
-        <div class="container">
+            <h1>这里是线上活动的答题网站</h1>
+            <h3 class="center"><a href="<?=site_url('online_question/start')?>" class="btn btn-primary btn_enlarge">开始答题</a></h3>
+
+            <p class="center">还不知道规则？<a href="http://baiduzju.org/sousuodasai/help">请戳这里</a></p>
 
         </div>
     </div>
