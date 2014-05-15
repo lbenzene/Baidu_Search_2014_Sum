@@ -4,8 +4,6 @@
 
 	class Online_question extends CI_Controller 
 	{
-		private $time;
-
 		public function __construct(){
 			parent::__construct();
 			$this->load->helper('url');
@@ -130,9 +128,9 @@
 				if ($check_data) 
 					$this->load_view('already');
 				else {
-					//$this->user_model->finished_online_question($this->session->userdata('username_online'),$mark);
+					$this->user_model->finished_online_question($this->session->userdata('username_online'),$mark);
 					$this->user_model->add_score_online($username,$data['total_score']);
-					if ($this->user_model->check_end_time($username,$mark) == NULL)
+					if ($this->user_model->check_end_time($username,$mark) == 0)
 							$this->user_model->add_end_time($username,$mark);
 					$this->load_view('result',$data);
 				}
