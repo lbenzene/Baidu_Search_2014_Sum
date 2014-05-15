@@ -469,13 +469,18 @@ div.bottom_info > div.timing{
 
 
 
-div.select > div{
+div.select > div,
+div.select > form{
   clear: both;
   margin: 20px 0;
 }
 
 @media (max-width: 767px) {
   div.select > div > label{
+    width: 100%;
+    text-align: center;
+  }
+  div.select > form > input[type="submit"]{
     width: 100%;
     text-align: center;
   }
@@ -495,16 +500,36 @@ div.select > div{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+
+  div.select > form > input[type="text"]{
+    width: 440px;
+    position: relative;
+    float: left;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; 
+  }
+
+  div.select > form > input[type="submit"]{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 @media (min-width: 992px) {
   div.select > div > input{
     width: 300px;
   }
+  div.select > form > input[type="text"]{
+    width: 300px;
+  }
 }
 
 @media (min-width: 1200px) {
   div.select > div > input{
+    width: 400px;
+  }
+  div.select > form > input[type="text"]{
     width: 400px;
   }
 }

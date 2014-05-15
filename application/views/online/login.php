@@ -26,9 +26,6 @@
                     method="post" autocomplete="off">
                     <div class="login_group">
                         <h1 class="center">线上大赛登录</h3>
-
-                        <p>返回错误信息</p>
-
                         <p>
                             <label for="login_username" id="login_username_label" class="login_label login_label_username">学号</label>
                             <input name="username" id="login_username" type="text" class="form-control" placeholder="学号">
