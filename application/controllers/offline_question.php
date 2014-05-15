@@ -4,19 +4,6 @@
 	
 	class Offline_question extends CI_Controller 
 	{
-		public $psw = array(
-				0 => 'b038170cd9d71916c5630bfae1c869e5',
-				1 => '97740e8f43e0598ee061ad4506d4fae0',
-				2 => '13f0de24fa41faf26260ca52d418883e',
-				3 => '876dc4e09705190dab29bdc72524d65c',
-				4 => 'e47e4f82190fa4b888716388ed41c3a7',
-				5 => '52292b91989c48e7bb489c0d7281ad6a',
-				6 => '4a94c06316119d9c2cda2b18f0c1ef40',
-				7 => '8ee5c6ff31f0f427eb236744438b2519',
-				8 => 'ab0268ab2571960ac0a4db94895a418f',
-				9 => 'fdae6374535a60439482665715827f1e'
-			);
-
 		public function __construct(){
 			parent::__construct();
 			$this->load->helper('url');
@@ -99,9 +86,20 @@
 			if (!is_numeric($mark)) $mark = 0;
 			if ($mark < 0 || $mark > 9) {
 				show_404();
-			}	else {		
+			}	else {
+				$psw = array(
+						0 => '254147',
+						1 => '512276',
+						2 => '247854',
+						3 => '324795',
+						4 => '395542',
+						5 => '217777',
+						6 => '821114',
+						7 => '321476',
+						8 => '399624',
+						9 => '754414');
 				if ($this->session->userdata('username_offline')!=NULL) {
-					if ($this->input->post('password',TRUE) != $this->$psw[$mark]) 
+					if ($this->input->post('password',TRUE) != $psw[$mark]) 
 						redirect('offline_question/start');
 					$username = $this->session->userdata('username_offline');
 					$check_data = $this->user_model->check_offline_answer_time($username,$mark);
