@@ -181,6 +181,7 @@ label.single_answer{
   border-color: #f0f0f0;
   background-color: transparent;
   margin:  2px auto;
+  white-space: normal;
 
   -webkit-transition: 0.2s ease-in-out; /* Safari and Chrome */
      -moz-transition: 0.2s ease-in-out; /* Firefox 4 */
