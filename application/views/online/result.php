@@ -21,21 +21,14 @@
         <div class="container center">
             <h1>提交成功</h1>
             <h1>本套题组得分：<?php echo $total_score; ?></h1>
-            <h3>点击<a href="<?=site_url('online_question/start')?>">这里返回答题界面</a></h3>
-            <h3>或者点击<a href="<?=site_url('online_question/index')?>">这里返回首页面</a></h3>
+            <h3>点击<a href="javascript:void(0)" onclick="close_window()">这里关闭窗口</a></h3>
         </div>
 
     </div>
 
     <script type="text/javascript">
-
-        // window.location.assign('<?=site_url()?>');
-        var t1 = setTimeout("document.getElementById('timing').innerHTML='4';",1000);
-        var t2 = setTimeout("document.getElementById('timing').innerHTML='3';",2000);
-        var t3 = setTimeout("document.getElementById('timing').innerHTML='2';",3000);
-        var t4 = setTimeout("document.getElementById('timing').innerHTML='1';",4000);
-
-        var t5 = setTimeout("window.location.assign('<?=site_url('online_question/start')?>');",5000);
-
+        function close_window(){
+            window.close();
+        }
     </script>
         <!--  /main  -->
