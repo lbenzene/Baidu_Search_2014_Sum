@@ -19,7 +19,8 @@
     
     <div class="row light_grey">
         <div class="container center">
-            <h1>你已经做过本套题组了</h1>
+            <h1>大赛还没有开始呢！</h1>
+            <h3>21：00大赛将准时开始，敬请期待。</h3>
             <h3><b id="timing">5</b>秒后<a href="javascript:void(0)" onclick="window.close()">关闭窗口</a></h3>
         </div>        
     </div>

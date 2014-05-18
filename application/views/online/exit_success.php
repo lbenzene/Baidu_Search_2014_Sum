@@ -20,7 +20,8 @@
     <div class="row light_grey">
         <div class="container center">
             <h1>退出成功</h1>
-            <h3><b id="timing">5</b>秒后返回<a href="<?=site_url('online_question/index')?>">首页</a></h3>
+            <h3><a href="<?=site_url('online_question/index')?>">首页</a></h3>
+            <h3><b id="timing">5</b>秒后<a href="javascript:void(0)" onclick="close_window()">关闭窗口</a></h3>
         </div>
     </div>
 

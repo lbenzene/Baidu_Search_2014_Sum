@@ -33,6 +33,11 @@
 			$this->load_view('index');
 		}
 
+		public function AJAX()
+		{	
+			$this->load->view('AJAX');
+		}
+
 		public function rules()
 		{
 			$this->load_view('rules');

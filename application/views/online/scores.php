@@ -31,10 +31,10 @@
                     <?php
                     foreach ($rank as $key => $user_scores):?>
                     <tr <?php if (isset($login_online)) if ($user_scores['username'] == $username_online) echo 'class="active" id="mine"';?>>
-                        <td style="width:10%"><?=$key+1?></td>
-                        <td><?=$user_scores['username']?></td>
-                        <td><?=$user_scores['score_online']?></td>
-                        <td><?php
+                        <td style="width:15%"><?=$key+1?></td>
+                        <td style="width:30%"><?=$user_scores['username']?></td>
+                        <td style="width:25%"><?=$user_scores['score_online']?></td>
+                        <td style="width:30%"><?php
                             $time = $user_scores['time_sum'];
                             $hours = (int)($time / 3600);
                             $minutes = (int)(($time - $hours*3600) / 60);

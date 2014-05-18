@@ -124,7 +124,7 @@ label.form_label_id_error{
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">其他<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">关于</a></li>
+                    <li class="disabled"><a>关于</a></li>
                     <li class="divider"></li>
                     <li><a href="#">郭神</a></li>
                 </ul>

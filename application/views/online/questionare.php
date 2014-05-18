@@ -13,12 +13,11 @@
             </div>
         </div>
     </div>
-        <!-- 答题页面 -->
+
     <div class="row light_grey">
         <div class="container main">
             <br />
             <form action="<?=site_url('online_question/check_answer/'.$mark)?>" method="post">
-                <!-- 单选 -->
                 <?php if (isset($select[0])) echo '<h3 class="problem">单选题:</h3>'; ?>
                 <?php foreach ($select as $keys => $question): ?>
                 <p class="problem"><?=$question['id']?>.<?=$question['problem']?></p>
@@ -44,7 +43,6 @@
                 <?php endforeach; ?>
 
                 <br />
-                <!-- 填空 -->
                 <?php if (isset($blank[0])) echo '<h3 class="problem">填空题:<b>(如果有多个空，请用英文分号“;”隔开，不要留空格)</b></h3>'; ?>
                 <?php foreach ($blank as $keys => $question): ?>
                 <div>
@@ -55,16 +53,14 @@
                 <?php endforeach; ?>
 
                 <br />
-                <p>恭喜你已经回答玩了</p>
+                <p>恭喜你已经回答完了</p>
                 <input type="submit" value="提交答案" class="btn btn-success" />
             </form>
             <br />
         </div>
 
     </div>
-        <!--  /main  -->
 
-        <!--  bottom_info part  -->
     <div class="bottom_info">
         <div class="bottom_logo"><a href="<?=site_url('offline_question/index')?>"></a></div>
         <div class="bottom_brand">Baidu Club</div>

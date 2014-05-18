@@ -78,7 +78,7 @@ label.login_label_password{
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="<?=site_url()?>" class="navbar-brand">百度菁英俱乐部</a>
+        <a href="http://baiduzju.org" class="navbar-brand">百度菁英俱乐部</a>
     </div>
 
 

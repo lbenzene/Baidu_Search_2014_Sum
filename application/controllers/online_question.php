@@ -82,10 +82,20 @@
 			}
 		}
 
+		public function invalid()
+		{
+			$this->load_view('invalid');
+		}
+
 		public function questionare($mark = 0)
 		{
 			if (!is_numeric($mark)) $mark = 0;
-			if ($mark < 0 || $mark > 5) {
+			$l_time = time();
+				//17号的
+			if ( $l_time < 1400331600 || $l_time > 1400338800 ) {
+				redirect('online_question/invalid');
+			}
+			if ($mark < 0 || $mark > 3) {
 				show_404();
 			}	else {		
 				if ($this->session->userdata('username_online')!=NULL) {
@@ -140,6 +150,8 @@
 			}
 		}
 	}
+
+
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

@@ -20,9 +20,18 @@
     <div class="row light_grey">
         <div class="container center">
         	<h1>你已经做过本套题组了</h1>
-        	<h3><a href="<?=site_url('offline_question/start')?>">点击这里返回答题界面</a></h3>
-        </div>
+            <h3><b id="timing">5</b>秒后<a href="javascript:void(0)" onclick="window.close()">关闭窗口</a></h3>
+        </div>        
     </div>
+    <script type="text/javascript">
 
+        var t1 = setTimeout("document.getElementById('timing').innerHTML='4';",1000);
+        var t2 = setTimeout("document.getElementById('timing').innerHTML='3';",2000);
+        var t3 = setTimeout("document.getElementById('timing').innerHTML='2';",3000);
+        var t4 = setTimeout("document.getElementById('timing').innerHTML='1';",4000);
+
+        var t5 = setTimeout("window.close();",5000);
+
+    </script>
 
         <!--  /main  -->
